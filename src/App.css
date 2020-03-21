@@ -1,38 +1,47 @@
-.App {
+@font-face {
+  font-family: 'neon_tubes_2regular';
+  src: url('./assets/neontubes2-webfont.woff2') format('woff2'),
+       url('./assets/neontubes2-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'neon_tubes_2regular';
+  color: #FFD5FF;
   text-align: center;
+  font-size: 4rem;
+  padding: 0 1rem;
+  text-shadow: 1px 0px 2px #FFD5FF,
+    2px 0px 2px #FFD5FF,
+    3px 0px 2px #FFD5FF,
+    2px 0px 2px #D42CCA,
+    2px 2px 15px #D42CCA,
+    2px 0px 15px,
+    5px 0px 100px,
+    20px 0vw 20px #D42CCA,
+    30px 0vw 200px #D42CCA;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.flicker-slow{
+  animation: flicker 3s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flicker-fast{
+  animation: flicker 1s linear infinite;
 }
 
-.App-header {
+@keyframes flicker {
+	0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: .99;
+		
+	}
+	20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+		opacity: 0.4;
+	}
+}
+
+body {
   background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
