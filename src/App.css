@@ -30,12 +30,12 @@ body {
     inset 0 0 12px #54EEFF;
   border: 4px solid #c2f2f7;
   border-radius: 6px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 h1 {
   font-family: 'neon_tubes_2regular';
-  /* background: black; */
-  /* background: linear-gradient(180deg, rgba(40,44,52,1) 0%, rgba(0,0,0,1) 51%, rgba(40,44,52,1) 100%); */
   color: #FFD5FF;
   text-align: center;
   font-size: 4rem;

@@ -9,11 +9,11 @@ function App() {
         <h1>S
           <span className="flicker-fast">T</span>
           <span className="flicker-slow">R</span>
-          ANGER THINGS 
+          ANGER THI
+          <span className="flicker-fast">N</span>
+          <span className="flicker-slow">G</span>S 
           <span className="flicker-slow"> A</span>
-          PI TUTOR
-          <span className="flicker-fast">I</span>
-          <span className="flicker-slow">AL</span>
+          PI
         </h1>
       </header>
       <main>
@@ -95,6 +95,9 @@ function App() {
       </section>
       <div className="neon-divider flicker-slow"></div>
     </main>
+    <footer>
+      
+    </footer>
   </div>
   );
 }
