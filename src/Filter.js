@@ -1,9 +1,9 @@
 import React from "react";
 
 const Filter = () => (
-  <svg viewbox="0 0 100% 100%">
+  <svg viewBox="0">
     <defs>
-      <circle id="diffuseLightSpot" cx="50%" cy="50%" r="25%" fill="#ea886d" />
+      <circle id="diffuseLightSpot" cx="50%" cy="50%" r="25%" fill="#f59aef" />
 
       <filter id="stroke">
         <feMorphology
@@ -42,7 +42,7 @@ const Filter = () => (
           surfaceScale="1"
           specularConstant="5"
           specularExponent="40"
-          lighting-color="#ea886d"
+          lightingColor="#f59aef"
           in="BLUR"
           result="SPECULAR"
         >
@@ -52,19 +52,18 @@ const Filter = () => (
           surfaceScale="1"
           specularConstant="10"
           specularExponent="50"
-          lighting-color="#ea886d"
+          lightingColor="#f59aef"
           in="BLUR"
           result="SPECULAR1"
         >
           <fePointLight x="1000" y="0" z="500" />
         </feSpecularLighting>
-        {/* We cut off the parts that overlap the source graphic… */}
 
         <feSpecularLighting
           surfaceScale="1"
           specularConstant="3"
           specularExponent="100"
-          lighting-color="#dd7170"
+          lightingColor="#d42cca"
           in="BLUR"
           result="SPECULAR2"
         >
@@ -91,8 +90,6 @@ const Filter = () => (
           result="COMPOSITE2"
         />
 
-        {/*and then merge source graphic and lighting effect:*/}
-
         <feMerge>
           <feMergeNode in="SourceGraphic" />
           <feMergeNode in="COMPOSITE" />
@@ -101,7 +98,7 @@ const Filter = () => (
         </feMerge>
       </filter>
       <filter id="noise" x="0vw" y="0vh" width="100vw" height="100vh">
-        <feFlood flood-color="#808080" result="neutral-gray" />
+        <feFlood floodColor="#d42cca" result="neutral-gray" />
         <feTurbulence
           in="neutral-gray"
           type="fractalNoise"

@@ -1,17 +1,3 @@
-:root {
-  background: black;
-}
-
-:root::before {
-  content: "";
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  filter: url(#noise);
-}
-
 .centered {
   position: absolute;
   transform: translateX(-50%);

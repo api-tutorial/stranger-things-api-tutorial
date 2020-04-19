@@ -3,22 +3,12 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "./App.css";
 import Tutorial from "./Tutorial";
 import Documentation from "./Documentation";
-import Test from "./Test";
+import Header from "./Header";
 
 function App() {
   return (
     <div className="App">
-      <Test />
-      {/* <header>
-        <h1>S
-          <span className="flicker-fast">T</span>
-          <span className="flicker-slow">R</span>
-          ANGER THI
-          <span className="flicker-fast">N</span>GS 
-          <span className="flicker-slow"> A</span>
-          PI
-        </h1>
-      </header> */}
+      <Header />
       <Router>
         <nav>
           <ul>

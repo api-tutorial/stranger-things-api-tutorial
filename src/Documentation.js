@@ -3,7 +3,6 @@ import "./App.css";
 
 const Documentation = () => (
   <>
-    <header>{/* <h2>Docs</h2> */}</header>
     <main>
       <section>
         <h3>Endpoints</h3>
