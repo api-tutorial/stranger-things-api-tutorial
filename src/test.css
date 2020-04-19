@@ -1,0 +1,62 @@
+:root {
+  background: black;
+}
+
+:root::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  filter: url(#noise);
+}
+
+.centered {
+  position: absolute;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  text-align: center;
+}
+
+.stranger-things {
+  filter: url(#bevel) url(#stroke) url(#bloom);
+}
+
+.stranger-things hr {
+  border: none;
+  background-color: #d42cca;
+  height: 3px;
+}
+
+.stranger-things hr.bottom-line {
+  margin-top: 30px;
+  margin-bottom: -30px;
+  width: 12%;
+  position: absolute;
+}
+
+.stranger-things hr.bottom-line.right {
+  right: 0;
+}
+
+.eighties {
+  color: #d42cca;
+  font-size: 50pt;
+  font-family: "Eighties Horror";
+  line-height: 1em;
+  letter-spacing: 3px;
+}
+
+.eighties.line1 {
+  font-size: 70pt;
+  letter-spacing: 4px;
+  margin-left: 0.3em;
+}
+
+.eighties.line1:first-letter,
+.eighties.line1 .last-letter {
+  font-size: 1.2em;
+  vertical-align: middle;
+  line-height: 0;
+}
