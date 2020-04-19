@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ad522b2e-c04d-47db-9143-711e911d0025/deploy-status)](https://app.netlify.com/sites/strangerthingsapi/deploys)
+
 ## Tutorial
 
 This project uses Node.js, Express, Superagent, MongoDB, Mongoose, and node-html-parser deployed to Heroku. This tutorial requires some familiarity with Node.js, Express, and MongoDB, but we have linked resources for you as well. Other technologies are available!
