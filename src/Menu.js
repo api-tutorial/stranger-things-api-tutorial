@@ -3,7 +3,6 @@ import { Drawer } from "antd";
 import MenuButton from "./MenuButton";
 import "./App.css";
 import "./MenuStyles.css";
-// import "antd/es/drawer/style/css";
 
 const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -35,7 +34,7 @@ const Menu = () => {
             </li>
             <li>
               <a href="/tutorial">Tutorial</a>
-              <ul>
+              <ul className="tutorial-dropdown">
                 <li>
                   <a href="/tutorial/#set-up">Dependencies</a>
                 </li>
@@ -61,22 +60,30 @@ const Menu = () => {
             </li>
             <li className="sub-nav">Resources</li>
             <li>
-              <a href="">Stranger Things fan wiki</a>
+              <a href="https://github.com/api-tutorial/stranger-things-api">
+                Stranger Things fan wiki
+              </a>
             </li>
             <li>
-              <a href="">Nodejs</a>
+              <a href="https://nodejs.org/en/docs/guides/getting-started-guide/">
+                Nodejs
+              </a>
             </li>
             <li>
-              <a href="">Expressjs</a>
+              <a href="https://expressjs.com/en/starter/hello-world.html">
+                Expressjs
+              </a>
             </li>
             <li>
-              <a href="">Mongodb</a>
+              <a href="https://docs.mongodb.com/manual/tutorial/getting-started/">
+                Mongodb
+              </a>
             </li>
             <li>
-              <a href="">Mongoose</a>
+              <a href="https://mongoosejs.com/docs/index.html">Mongoose</a>
             </li>
             <li>
-              <a href="">Heroku</a>
+              <a href="https://devcenter.heroku.com/start">Heroku</a>
             </li>
           </ul>
         </Drawer>

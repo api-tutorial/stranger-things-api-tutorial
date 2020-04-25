@@ -54,7 +54,14 @@
   height: 100%;
 }
 
-/* open drawer styles below */
+/* 
+
+_______open drawer styles below________
+
+*/
+
+/* Inside the layout */
+
 .ant-drawer-left.ant-drawer-open .ant-drawer-content-wrapper {
   box-shadow: 6px 0 16px -8px rgba(0, 0, 0, 0.08),
     9px 0 28px 0 rgba(0, 0, 0, 0.05), 12px 0 48px 16px rgba(0, 0, 0, 0.03);
@@ -81,29 +88,41 @@
   }
 }
 
+/* DRAWER CONTENT */
+
 .ant-drawer-header {
   display: flex;
   justify-content: space-between;
 }
 
 button.ant-drawer-close {
-  border: none;
-  background: transparent;
+  border: 1px solid #9c27b066;
+  background: #9c27b0;
   cursor: pointer;
+  border-radius: 50%;
+  padding-bottom: 0;
 }
 
 .ant-drawer-body > ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
 }
 
 .ant-drawer-body > ul > li {
   letter-spacing: 0.5px;
-  padding: 8px;
+  padding: 10px;
   margin: 0;
-  color: black;
-  padding-left: 12px;
-  border-bottom: 0.5px solid #9c27b066;
+  padding-left: 16px;
+}
+
+.ant-drawer-body > ul > li a {
+  color: #9c27b0;
+}
+
+.ant-drawer-body > ul > li:hover,
+li:active a {
+  background-color: #e5e5fd;
 }
 
 .ant-drawer-body > ul > li.sub-nav,
@@ -113,4 +132,13 @@ button.ant-drawer-close {
   background-color: white;
   color: #216cff;
   border-bottom: 3px solid #216cff;
+  border-top: 0.5px solid #9c27b066;
+}
+
+.tutorial-dropdown {
+  display: none;
+}
+
+.anticon svg {
+  fill: white;
 }
