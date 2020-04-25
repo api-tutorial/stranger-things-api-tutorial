@@ -9,18 +9,8 @@ import Menu from "./Menu";
 const App = () => (
   <div className="App">
     <Menu />
-    <Header />
     <Router>
-      <nav>
-        <ul>
-          <li className="nav">
-            <Link to="/docs">Documentation</Link>
-          </li>
-          <li className="nav">
-            <Link to="/tutorial">Tutorial</Link>
-          </li>
-        </ul>
-      </nav>
+      <Header />
       <main>
         <Route exact path="/" component={Documentation} />
         <Route path="/docs" component={Documentation} />

@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "antd";
+import MenuOpenIcon from "@material-ui/icons/MenuOpen";
 import "./App.css";
 
 const MenuButton = ({ handleClick }) => (
-  <Button type="primary" onClick={handleClick}>
-    MENU
+  <Button aria-label="open menu" type="primary" onClick={handleClick}>
+    <MenuOpenIcon />
   </Button>
 );
 

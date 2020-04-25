@@ -17,18 +17,12 @@ body {
   overflow: scroll;
 }
 
-nav {
-  margin-top: 4em;
-}
-
-nav > ul {
+.tabs {
   padding: 0;
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-}
-
-.nav {
+  transform: translateY(100%);
   letter-spacing: 5px;
   font-family: "neon_tubes_2regular";
   color: #ffd5ff;
@@ -40,7 +34,11 @@ nav > ul {
     20px 0vw 20px #d42cca, 30px 0vw 200px #d42cca;
 }
 
-.nav-drawer {
+@media (max-width: 862px) {
+  .tabs {
+    flex-direction: column;
+    transform: translateY(50%);
+  }
 }
 
 .neon-divider {

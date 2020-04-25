@@ -3,18 +3,15 @@ import "./App.css";
 
 const Tutorial = () => (
   <>
+    <div id="set-up" className="neon-divider"></div>
     <section>
-      <h3>Prerequisites</h3>
+      <h3>Prerequisites &amp;&amp; Getting set up</h3>
       <p>
         This project uses Node.js, Express, Superagent, MongoDB, Mongoose, and
         node-html-parser deployed to Heroku. This tutorial requires some
         familiarity with Node.js, Express, and MongoDB, but we have linked
         resources for you as well. Other technologies are available!
       </p>
-    </section>
-    <div id="set-up" className="neon-divider"></div>
-    <section>
-      <h3>Getting set up</h3>
       <p>
         You'll need to set up a{" "}
         <a href="https://nodejs.org/en/docs/guides/getting-started-guide/">

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Filter from "./Filter";
 import "./header.css";
 
@@ -16,6 +17,14 @@ const Test = () => (
       </div>
     </div>
     <Filter />
+    <ul className="tabs">
+      <li className="nav">
+        <Link to="/docs">Documentation</Link>
+      </li>
+      <li className="nav">
+        <Link to="/tutorial">Tutorial</Link>
+      </li>
+    </ul>
   </header>
 );
 

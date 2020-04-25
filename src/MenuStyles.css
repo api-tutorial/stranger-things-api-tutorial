@@ -1,3 +1,58 @@
+nav.nav-drawer {
+  position: absolute;
+  margin: 2em 0 0 2em;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.ant-btn,
+.ant-btn-secondary {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 2px solid ghostwhite;
+  background-color: black;
+  color: ghostwhite;
+  cursor: pointer;
+}
+
+.ant-btn:focus,
+.ant-btn:focus-within,
+.ant-btn:active {
+  outline: 5px solid #effb31;
+}
+
+.ant-btn svg {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 862px) {
+  nav.nav-drawer {
+    position: fixed;
+    width: 100vw;
+    margin: 0;
+  }
+
+  .ant-btn,
+  .ant-btn-secondary {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  header.container {
+    margin-top: 4em;
+  }
+
+  .ant-btn svg {
+    float: left;
+  }
+}
+
+/*  
+DRAWER STYLES 
+*/
+
 .ant-drawer {
   position: fixed;
   z-index: 1000;
@@ -110,7 +165,7 @@ button.ant-drawer-close {
 }
 
 .dropdown,
-.ant-drawer-body > ul > li {
+.ant-drawer-body > ul > li.nav-item {
   letter-spacing: 0.5px;
   padding: 10px;
   margin: 0;
@@ -118,7 +173,7 @@ button.ant-drawer-close {
 }
 
 .dropdown,
-.ant-drawer-body > ul > li a {
+.ant-drawer-body > ul > li.nav-item a {
   color: #9c27b0;
 }
 
@@ -139,8 +194,10 @@ button.ant-drawer-close {
   cursor: pointer;
 }
 
-.ant-drawer-body > ul > li:hover,
-li:active a {
+.ant-drawer-body > ul > .nav-item:hover,
+.nav-item:focus,
+.nav-item:active,
+.nav-item:focus-within {
   background-color: #e5e5fd;
 }
 
@@ -152,6 +209,9 @@ li:active a {
   color: #216cff;
   border-bottom: 3px solid #216cff;
   border-top: 0.5px solid #9c27b066;
+}
+
+.tutorial-dropdown {
 }
 
 .hidden {
