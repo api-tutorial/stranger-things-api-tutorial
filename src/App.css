@@ -118,7 +118,6 @@ p {
 h2 {
   font-weight: normal;
   text-align: center;
-  /* font-family: 'neon_tubes_2regular'; */
 }
 
 h3 {
@@ -173,5 +172,5 @@ h6 {
 .json-block {
   height: 500px;
   overflow: scroll;
-  background-color: whitesmoke;
+  background-color: ghostwhite;
 }

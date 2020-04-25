@@ -25,6 +25,7 @@ const Test = () => (
         <Link to="/tutorial">Tutorial</Link>
       </li>
     </ul>
+    <div id="set-up" className="neon-divider"></div>
   </header>
 );
 

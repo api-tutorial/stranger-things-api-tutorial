@@ -3,7 +3,6 @@ import "./App.css";
 
 const Tutorial = () => (
   <>
-    <div id="set-up" className="neon-divider"></div>
     <section>
       <h3>Prerequisites &amp;&amp; Getting set up</h3>
       <p>
