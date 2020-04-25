@@ -3,9 +3,12 @@ import { Drawer } from "antd";
 import MenuButton from "./MenuButton";
 import "./App.css";
 import "./MenuStyles.css";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import ExpandLessIcon from "@material-ui/icons/ExpandLess";
 
 const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isDropDownVisible, setIsDropdownVisible] = useState(false);
 
   return (
     <div className="nav-drawer">
@@ -32,9 +35,23 @@ const Menu = () => {
             <li>
               <a href="/docs">Documentation</a>
             </li>
-            <li>
-              <a href="/tutorial">Tutorial</a>
-              <ul className="tutorial-dropdown">
+            <li className="dropdown-list">
+              <button
+                aria-label="tutorial sections dropdown"
+                className="dropdown"
+                onClick={() => setIsDropdownVisible(!isDropDownVisible)}
+              >
+                Tutorial
+                {!isDropDownVisible && <ExpandMoreIcon />}
+                {isDropDownVisible && <ExpandLessIcon />}
+              </button>
+              <ul
+                className={
+                  isDropDownVisible
+                    ? "tutorial-dropdown"
+                    : "tutorial-dropdown hidden"
+                }
+              >
                 <li>
                   <a href="/tutorial/#set-up">Dependencies</a>
                 </li>

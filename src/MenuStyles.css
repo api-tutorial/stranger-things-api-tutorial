@@ -109,6 +109,7 @@ button.ant-drawer-close {
   margin: 0;
 }
 
+.dropdown,
 .ant-drawer-body > ul > li {
   letter-spacing: 0.5px;
   padding: 10px;
@@ -116,8 +117,26 @@ button.ant-drawer-close {
   padding-left: 16px;
 }
 
+.dropdown,
 .ant-drawer-body > ul > li a {
   color: #9c27b0;
+}
+
+.dropdown {
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown svg {
+  fill: #9c27b0;
+  cursor: pointer;
 }
 
 .ant-drawer-body > ul > li:hover,
@@ -135,7 +154,7 @@ li:active a {
   border-top: 0.5px solid #9c27b066;
 }
 
-.tutorial-dropdown {
+.hidden {
   display: none;
 }
 
