@@ -40,6 +40,9 @@ nav > ul {
     20px 0vw 20px #d42cca, 30px 0vw 200px #d42cca;
 }
 
+.nav-drawer {
+}
+
 .neon-divider {
   box-shadow: 0 0 1px #54eeff, 0 0 2px #54eeff, 0 0 6px #54eeff,
     0 0 12px #54eeff, inset 0 0 1px #54eeff, inset 0 0 2px #54eeff,

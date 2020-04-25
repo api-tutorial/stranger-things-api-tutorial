@@ -4,7 +4,7 @@ import "./App.css";
 const Tutorial = () => (
   <>
     <header>
-      <nav>
+      {/* <nav>
         <ul>
           <li>
             <a href="#set-up">Dependencies</a>
@@ -28,7 +28,7 @@ const Tutorial = () => (
             <a href="#step-6">Documentation</a>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </header>
     <main>
       <section>
@@ -297,7 +297,7 @@ const Character = require('./lib/Models/Character');`}</code>
         <p>
           We set all of this up in it's own file in the root of our application
         </p>
-        <div Name="code-block">
+        <div className="code-block">
           <pre>
             <code>{`// ./seed.js
 
