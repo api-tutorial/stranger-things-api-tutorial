@@ -99,12 +99,10 @@ h1 {
   main {
     margin: 0 3rem;
   }
-  section {
-    margin: 0 2rem;
-  }
 }
 
 section {
+  margin: 0 2rem;
   font-family: Helvetica, Arial, sans-serif;
 }
 
