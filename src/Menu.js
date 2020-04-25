@@ -26,25 +26,57 @@ const Menu = () => {
         >
           <ul>
             <li>
-              <a href="/tutorial/#set-up">Dependencies</a>
+              <a href="https://www.github.com/api-tutorial/stranger-things-api">
+                Source Code
+              </a>
             </li>
             <li>
-              <a href="/tutorial/#step-1">Set up</a>
+              <a href="/docs">Documentation</a>
             </li>
             <li>
-              <a href="/tutorial/#step-2">Scrape Data</a>
+              <a href="/tutorial">Tutorial</a>
+              <ul>
+                <li>
+                  <a href="/tutorial/#set-up">Dependencies</a>
+                </li>
+                <li>
+                  <a href="/tutorial/#step-1">Set up</a>
+                </li>
+                <li>
+                  <a href="/tutorial/#step-2">Scrape Data</a>
+                </li>
+                <li>
+                  <a href="/tutorial/#step-3">Database</a>
+                </li>
+                <li>
+                  <a href="/tutorial/#step-4">Routes</a>
+                </li>
+                <li>
+                  <a href="/tutorial/#step-5">Deploy!</a>
+                </li>
+                <li>
+                  <a href="/tutorial/#step-6">Documentation</a>
+                </li>
+              </ul>
+            </li>
+            <li className="sub-nav">Resources</li>
+            <li>
+              <a href="">Stranger Things fan wiki</a>
             </li>
             <li>
-              <a href="/tutorial/#step-3">Database</a>
+              <a href="">Nodejs</a>
             </li>
             <li>
-              <a href="/tutorial/#step-4">Routes</a>
+              <a href="">Expressjs</a>
             </li>
             <li>
-              <a href="/tutorial/#step-5">Deploy!</a>
+              <a href="">Mongodb</a>
             </li>
             <li>
-              <a href="/tutorial/#step-6">Documentation</a>
+              <a href="">Mongoose</a>
+            </li>
+            <li>
+              <a href="">Heroku</a>
             </li>
           </ul>
         </Drawer>

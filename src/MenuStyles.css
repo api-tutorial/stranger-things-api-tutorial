@@ -21,7 +21,7 @@
   position: relative;
   z-index: 1;
   overflow: auto;
-  background-color: grey;
+  background-color: ghostwhite;
   background-clip: padding-box;
   border: 0;
 }
@@ -37,9 +37,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 0;
   height: 0;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: #1b19198a;
   opacity: 0;
   filter: alpha(opacity=45);
   transition: opacity 0.3s linear, height 0s ease 0.3s;
@@ -62,4 +62,55 @@
 
 .ant-drawer-open.ant-drawer-content-wrapper {
   width: 265px;
+}
+
+.ant-drawer.ant-drawer-open .ant-drawer-mask {
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  transition: none;
+  animation: antdDrawerFadeIn 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+}
+
+@keyframes antDrawerFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.ant-drawer-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.ant-drawer-close {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ant-drawer-body > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.ant-drawer-body > ul > li {
+  letter-spacing: 0.5px;
+  padding: 8px;
+  margin: 0;
+  color: black;
+  padding-left: 12px;
+  border-bottom: 0.5px solid #9c27b066;
+}
+
+.ant-drawer-body > ul > li.sub-nav,
+.ant-drawer-header {
+  padding: 12px;
+  font-weight: bold;
+  background-color: white;
+  color: #216cff;
+  border-bottom: 3px solid #216cff;
 }
