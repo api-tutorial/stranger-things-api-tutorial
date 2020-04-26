@@ -49,7 +49,7 @@ const Menu = () => {
               Documentation
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item dropdown-btn">
             <button
               aria-label="tutorial sections dropdown"
               className="dropdown"

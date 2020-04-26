@@ -134,9 +134,14 @@ button.ant-drawer-close {
   padding-bottom: 0;
 }
 
+button.ant-drawer-close:hover,
+button.ant-drawer-close:focus,
+button.ant-drawer-close:focus-within {
+  background-color: #84019a;
+}
+
 .tutorial-dropdown {
   background-color: white;
-  border-top: 0.5px solid #9c27b066;
 }
 
 .tutorial-dropdown > li:last-of-type {
@@ -154,6 +159,7 @@ button.ant-drawer-close {
 .tutorial-dropdown > li.dropdown-nav-item {
   display: flex;
   align-items: center;
+  padding: 2px;
   padding-left: 44px;
 }
 
@@ -195,16 +201,23 @@ li.dropdown-nav-item svg {
   align-items: center;
 }
 
+.dropdown-btn {
+  border-bottom: 0.5px solid #9c27b066;
+}
+
 .dropdown svg {
   fill: #9c27b0;
   cursor: pointer;
 }
 
-.ant-drawer-body > ul > .nav-item:hover,
+.dropdown:focus,
+.nav-item:hover,
 .nav-item:focus,
 .nav-item:active,
-.nav-item:focus-within {
+.nav-item:focus-within,
+.nav-item > a:focus {
   background-color: #e5e5fd;
+  outline: none;
 }
 
 .ant-drawer-body > ul > li.sub-nav,
@@ -223,8 +236,13 @@ li.dropdown-nav-item > a:hover {
 
 li.dropdown-nav-item:hover,
 li.dropdown-nav-item > a:hover,
-li.dropdown-nav-item > svg:hover {
+li.dropdown-nav-item > svg:hover,
+li.dropdown-nav-item:focus,
+li.dropdown-nav-item:focus-within,
+li.dropdown-nav-item > a:focus {
   background-color: ghostwhite;
+  text-decoration: underline;
+  outline: none;
 }
 
 li:nth-of-type(4) {
