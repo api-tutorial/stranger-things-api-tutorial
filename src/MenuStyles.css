@@ -129,16 +129,45 @@ _______open drawer styles below________
 
 button.ant-drawer-close {
   border: 1px solid #9c27b066;
-  background: #9c27b0;
+  background: #9c27b0a3;
   cursor: pointer;
   border-radius: 50%;
   padding-bottom: 0;
 }
 
+.tutorial-dropdown {
+  background-color: white;
+  border-top: 0.5px solid #9c27b066;
+}
+
+.tutorial-dropdown > li:last-of-type {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.tutorial-dropdown,
 .ant-drawer-body > ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
+}
+
+.tutorial-dropdown > li.dropdown-nav-item {
+  display: flex;
+  align-items: center;
+  padding-left: 44px;
+}
+
+.tutorial-dropdown > li.dropdown-nav-item,
+li.dropdown-nav-item svg {
+  color: #216cff;
+  fill: #216cff;
+}
+
+.tutorial-dropdown > li.dropdown-nav-item > a {
+  font-size: 0.75em;
+  color: inherit;
+  padding: 8px;
 }
 
 .dropdown,
@@ -150,6 +179,7 @@ button.ant-drawer-close {
 }
 
 .dropdown,
+.tutorial-dropdown,
 .ant-drawer-body > ul > li.nav-item a {
   color: #9c27b0;
 }
@@ -188,7 +218,18 @@ button.ant-drawer-close {
   border-top: 0.5px solid #9c27b066;
 }
 
-.tutorial-dropdown {
+li.dropdown-nav-item > a:hover {
+  text-decoration: none;
+}
+
+li.dropdown-nav-item:hover,
+li.dropdown-nav-item > a:hover,
+li.dropdown-nav-item > svg:hover {
+  background-color: ghostwhite;
+}
+
+li:nth-of-type(4) {
+  margin: 0;
 }
 
 .hidden {

@@ -5,6 +5,13 @@ import "./App.css";
 import "./MenuStyles.css";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import ExpandLessIcon from "@material-ui/icons/ExpandLess";
+import CodeIcon from "@material-ui/icons/Code";
+import GroupWorkIcon from "@material-ui/icons/GroupWork";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+import CompareArrowsIcon from "@material-ui/icons/CompareArrows";
+import LaptopMacIcon from "@material-ui/icons/LaptopMac";
+import PostAddIcon from "@material-ui/icons/PostAdd";
+import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 
 const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -40,7 +47,7 @@ const Menu = () => {
               Documentation
             </a>
           </li>
-          <li className="nav-item dropdown-list">
+          <li className="nav-item">
             <button
               aria-label="tutorial sections dropdown"
               className="dropdown"
@@ -50,6 +57,8 @@ const Menu = () => {
               {!isDropDownVisible && <ExpandMoreIcon />}
               {isDropDownVisible && <ExpandLessIcon />}
             </button>
+          </li>
+          <li>
             <ul
               className={
                 isDropDownVisible
@@ -58,36 +67,43 @@ const Menu = () => {
               }
             >
               <li className="dropdown-nav-item">
+                <GroupWorkIcon />
                 <a onClick={closeMenu} href="/tutorial/#set-up">
                   Dependencies
                 </a>
               </li>
               <li className="dropdown-nav-item">
+                <CheckCircleOutlineIcon />
                 <a onClick={closeMenu} href="/tutorial/#step-1">
                   Set up
                 </a>
               </li>
               <li className="dropdown-nav-item">
+                <CodeIcon />
                 <a onClick={closeMenu} href="/tutorial/#step-2">
                   Scrape Data
                 </a>
               </li>
               <li className="dropdown-nav-item">
+                <CloudUploadIcon />
                 <a onClick={closeMenu} href="/tutorial/#step-3">
                   Database
                 </a>
               </li>
               <li className="dropdown-nav-item">
+                <CompareArrowsIcon />
                 <a onClick={closeMenu} href="/tutorial/#step-4">
                   Routes
                 </a>
               </li>
               <li className="dropdown-nav-item">
+                <LaptopMacIcon />
                 <a onClick={closeMenu} href="/tutorial/#step-5">
                   Deploy!
                 </a>
               </li>
               <li className="dropdown-nav-item">
+                <PostAddIcon />
                 <a onClick={closeMenu} href="/tutorial/#step-6">
                   Documentation
                 </a>
