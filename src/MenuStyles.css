@@ -186,6 +186,8 @@ li.dropdown-nav-item svg {
 .tutorial-dropdown,
 .ant-drawer-body > ul > li.nav-item a {
   color: #9c27b0;
+  width: 100%;
+  display: block;
 }
 
 .dropdown {

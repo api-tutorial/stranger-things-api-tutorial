@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import "./App.css";
 import Tutorial from "./Tutorial";
 import Documentation from "./Documentation";
@@ -12,7 +12,7 @@ const App = () => (
     <Router>
       <Header />
       <main>
-        <Route exact path="/" component={Documentation} />
+        <Route exact path="/" render={() => <Redirect to="/docs" />} />
         <Route path="/docs" component={Documentation} />
         <Route path="/tutorial" component={Tutorial} />
       </main>

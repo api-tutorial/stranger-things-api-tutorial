@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import Filter from "./Filter";
 import "./header.css";
 
-const Test = () => {(
+const Header = () => (
   <header className="container">
     <div className="centered">
       <div className="stranger-things">
@@ -33,4 +33,4 @@ const Test = () => {(
   </header>
 );
 
-export default Test;
+export default Header;
