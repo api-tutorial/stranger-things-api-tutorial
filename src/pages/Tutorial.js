@@ -51,22 +51,24 @@ const Tutorial = () => (
           Express.js
         </a>{" "}
         but you can use whatever you want!
-        <div className="gif">
-          <iframe
-            src="https://giphy.com/embed/8P7FwgxW7FLH0LrDDZ"
-            width="480"
-            height="270"
-            frameBorder="0"
-            className="giphy-embed"
-            title="The kids from Stranger Things setting up the giant antenna"
-            allowFullScreen
-          ></iframe>
-          <p>
-            <a href="https://giphy.com/gifs/strangerthings-netflix-stranger-things-8P7FwgxW7FLH0LrDDZ">
-              via GIPHY
-            </a>
-          </p>
-        </div>
+      </p>
+      <div className="gif">
+        <iframe
+          src="https://giphy.com/embed/8P7FwgxW7FLH0LrDDZ"
+          width="480"
+          height="270"
+          frameBorder="0"
+          className="giphy-embed"
+          title="The kids from Stranger Things setting up the giant antenna"
+          allowFullScreen
+        ></iframe>
+        <p>
+          <a href="https://giphy.com/gifs/strangerthings-netflix-stranger-things-8P7FwgxW7FLH0LrDDZ">
+            via GIPHY
+          </a>
+        </p>
+      </div>
+      <p>
         We're not going to get into the details of setting up Node/Express. The
         docs provide great instructions and there are free tutorials available.
         You can also find the source code for this entire api tutorial{" "}
