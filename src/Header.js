@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Filter from "./Filter";
 import "./header.css";
 
-const Test = () => (
+const Test = () => {(
   <header className="container">
     <div className="centered">
       <div className="stranger-things">
@@ -18,11 +18,15 @@ const Test = () => (
     </div>
     <Filter />
     <ul className="tabs">
-      <li className="nav">
-        <Link to="/docs">Documentation</Link>
+      <li className="tab">
+        <NavLink to="/docs" activeClassName="active">
+          Documentation
+        </NavLink>
       </li>
-      <li className="nav">
-        <Link to="/tutorial">Tutorial</Link>
+      <li className="tab">
+        <NavLink to="/tutorial" activeClassName="active">
+          Tutorial
+        </NavLink>
       </li>
     </ul>
     <div id="set-up" className="neon-divider"></div>

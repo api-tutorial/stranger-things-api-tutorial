@@ -114,7 +114,7 @@ const Menu = () => {
           </li>
           <li className="sub-nav">Resources</li>
           <li className="nav-item">
-            <a href="https://github.com/api-tutorial/stranger-things-api">
+            <a href="https://strangerthings.fandom.com/wiki/Category:Characters">
               Stranger Things fan wiki
             </a>
           </li>

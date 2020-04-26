@@ -159,7 +159,6 @@ button.ant-drawer-close:focus-within {
 .tutorial-dropdown > li.dropdown-nav-item {
   display: flex;
   align-items: center;
-  padding: 2px;
   padding-left: 44px;
 }
 
@@ -215,9 +214,11 @@ li.dropdown-nav-item svg {
 .nav-item:focus,
 .nav-item:active,
 .nav-item:focus-within,
-.nav-item > a:focus {
+.nav-item > a:focus,
+.nav-item > a:hover {
   background-color: #e5e5fd;
   outline: none;
+  text-decoration: none;
 }
 
 .ant-drawer-body > ul > li.sub-nav,
