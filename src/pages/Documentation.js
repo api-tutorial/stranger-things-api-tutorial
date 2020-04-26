@@ -1,5 +1,6 @@
 import React from "react";
-import "./App.css";
+import { Divider } from "../components";
+import "../App.css";
 
 const Documentation = () => (
   <>
@@ -33,6 +34,7 @@ const Documentation = () => (
         portrayedBy
       </p>
     </section>
+    <Divider />
     <section id="endpoint-sandbox">
       <div>
         <label htmlFor="endpoint">Try out an endpoint: </label>

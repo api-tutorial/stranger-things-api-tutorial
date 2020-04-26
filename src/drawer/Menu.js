@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Drawer } from "antd";
-import MenuButton from "./MenuButton";
+import Button from "./Button";
 import {
   ExpandLess,
   ExpandMore,
@@ -12,8 +12,8 @@ import {
   PostAdd,
   CheckCircleOutline,
 } from "@material-ui/icons";
-import "./App.css";
-import "./MenuStyles.css";
+import "../App.css";
+import "./menu.css";
 
 const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,7 +24,7 @@ const Menu = () => {
   return (
     <nav className="nav-drawer">
       <div className="btn-wrapper">
-        <MenuButton handleClick={() => setIsVisible(true)} />
+        <Button handleClick={() => setIsVisible(true)} />
       </div>
       <Drawer
         title="Menu"

@@ -1,5 +1,6 @@
 import React from "react";
-import "./App.css";
+import { Divider } from "../components";
+import "../App.css";
 
 const Tutorial = () => (
   <>
@@ -27,7 +28,7 @@ const Tutorial = () => (
         <a href="https://github.com/api-tutorial/stranger-things-api">HERE</a>.
       </p>
     </section>
-    <div className="neon-divider flicker-slow"></div>
+    <Divider id="set-up" flickerSpeed="slow" />
     <section>
       <h3>Things to consider before scraping</h3>
       <ol>
@@ -48,7 +49,7 @@ const Tutorial = () => (
         </li>
       </ol>
     </section>
-    <div id="step-1" className="neon-divider"></div>
+    <Divider id="step-1" />
     <section>
       <h3>Step 1: Set up your scraper</h3>
       <p>
@@ -96,7 +97,7 @@ module.exports = { scraper };
         html data appear in your console.
       </p>
     </section>
-    <div id="step-2" className="neon-divider"></div>
+    <Divider id="step-2" flickerSpeed="fast" />
     <section>
       <h3>
         Step 2: Time to <s>hack into</s> scape some data
@@ -108,7 +109,7 @@ module.exports = { scraper };
       </p>
       <div>
         <img
-          src={require("./assets/inspectView.png")}
+          src={require("../assets/inspectView.png")}
           alt="screenshot showing stranger things wiki fan site with browser devtools open inspecting html elements"
         />
       </div>
@@ -155,7 +156,7 @@ module.exports = { scraper };
         functions and start to piece it all together to match your db schema.
       </p>
     </section>
-    <div id="step-3" className="neon-divider flicker-slow"></div>
+    <Divider id="step-3" flickerSpeed="slow" />
     <section>
       <h3>Step 3: Database</h3>
       <p>
@@ -281,7 +282,7 @@ scrapeData()
         documentation on how to download and set this up on your machine.
       </p>
     </section>
-    <div id="step-4" className="neon-divider"></div>
+    <Divider id="step-4" />
     <section>
       <h3>Step 4: Routes</h3>
       <p>
@@ -370,7 +371,7 @@ scrapeData()
         </pre>
       </div>
     </section>
-    <div id="step-5" className="neon-divider"></div>
+    <Divider id="step-5" />
     <section>
       <h3>Step 5: Deploy!</h3>
       <p>We decided to deploy to Heroku! Here are some resources:</p>
@@ -392,7 +393,7 @@ scrapeData()
         </li>
       </ul>
     </section>
-    <div id="step-6" className="neon-divider"></div>
+    <Divider id="step-6" />
     <section>
       <h3>Step 6: Document</h3>
       <p>
