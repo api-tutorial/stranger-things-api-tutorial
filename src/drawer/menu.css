@@ -10,9 +10,9 @@ nav.nav-drawer {
 .ant-btn-secondary {
   width: 5em;
   height: 5em;
-  border: 2px solid ghostwhite;
+  border: 2px solid #d9d9d9;
   background-color: black;
-  color: ghostwhite;
+  color: #d9d9d9;
   cursor: pointer;
 }
 
