@@ -30,7 +30,7 @@ const Tutorial = () => (
     <div className="neon-divider flicker-slow"></div>
     <section>
       <h3>Things to consider before scraping</h3>
-      <ul>
+      <ol>
         <li>
           Think about what you are scraping and how often that data changes.
         </li>
@@ -46,7 +46,7 @@ const Tutorial = () => (
           will be easy to target when trying to retreive the data? (more about
           this is in<a href="#step-2"> step 2</a>.
         </li>
-      </ul>
+      </ol>
     </section>
     <div id="step-1" className="neon-divider"></div>
     <section>
@@ -72,21 +72,23 @@ const Tutorial = () => (
       </p>
       <div className="code-block">
         <pre>
-          <code>{` const request = require('superagent');
+          <code>
+            {`const request = require('superagent');
 const { parse } = require('node-html-parser');
 
 const scraper = () => {
-return request
-.get([your url here])
-.then(res => res.text)
-.then(parse)
-.then(console.log);
+  return request
+    .get([your url here])
+    .then(res => res.text)
+    .then(parse)
+    .then(console.log);
 };
 
 scraper();
 
 module.exports = { scraper };
-`}</code>
+`}
+          </code>
         </pre>
       </div>
       <p>
@@ -119,9 +121,11 @@ module.exports = { scraper };
       </p>
       <div className="code-block">
         <pre>
-          <code>{`const titlesList = html => html
-.querySelectorAll('h3 .pi-title')
-.map(node => node.rawText);`}</code>
+          <code>{`const titlesList = html => {
+  return html
+    .querySelectorAll('h3 .pi-title')
+    .map(node => node.rawText);
+}`}</code>
         </pre>
       </div>
       <p>
@@ -131,17 +135,19 @@ module.exports = { scraper };
       <div className="code-block">
         <pre>
           <code>{`const scraper = () => {
-return request
-.get([your url here])
-.then(res => res.text)
-.then(parse)
-.then(titlesList)
-.then(console.log);
+  return request
+    .get([your url here])
+    .then(res => res.text)
+    .then(parse)
+    .then(titlesList)
+    .then(console.log);
 };`}</code>
         </pre>
       </div>
       <p>
-        run <code>node scraper.js</code> again
+        run
+        <br />
+        <code>node scraper.js</code>
       </p>
       <p>
         At this point you should be able to see the data and start to make
@@ -164,7 +170,7 @@ return request
         <em>You will need MongoDB set up on your computer to follow along.</em>{" "}
         This is how we set up our database
       </p>
-      <h4>a. Set up your schema</h4>
+      <h4>Set up your schema</h4>
       <p>
         Your schema is how you want your data to look in your database.
         Basically it is a blueprint for MongoDB. Since all of your data is
@@ -174,9 +180,7 @@ return request
       </p>
       <div className="code-block">
         <pre>
-          <code>{`{
-name: 'Eleven'
-}`}</code>
+          <code>{`{ name: 'Eleven' }`}</code>
         </pre>
       </div>
       <p>
@@ -186,15 +190,14 @@ name: 'Eleven'
       <p>Here is a short snippet from Character.js:</p>
       <div className="code-block">
         <pre>
-          <code>{`
-const mongoose = require('mongoose');
+          <code>{`const mongoose = require('mongoose');
 
 const characterSchema = new mongoose.Schema({
-name: String,
-aliases: {
-type: [String],
-default: ['unknown']
-},
+  name: String,
+  aliases: {
+    type: [String],
+    default: ['unknown']
+  },
 });
 
 module.exports = mongoose.model('Character', characterSchema);`}</code>
@@ -202,13 +205,12 @@ module.exports = mongoose.model('Character', characterSchema);`}</code>
       </div>
       <p>
         You'll notice that 'aliases' has a type <code>{`[String]`}</code>; this
-        is to specify that all aliases are arrays of strings.
-        <br />
-        The default value is for characters that do not have an 'aliases' field.
-        This is an optional field. (There is also an optional 'required' field,
-        which is defaulted to false.)
+        is to specify that all aliases are arrays of strings. The default value
+        is for characters that do not have an 'aliases' field. This is an
+        optional field. (There is also an optional 'required' field, which is
+        defaulted to false.)
       </p>
-      <h4>b. Set up your connection</h4>
+      <h4>Set up your connection</h4>
       <ol>
         <li>
           You are going to need to connect your application to your database. We
@@ -220,14 +222,18 @@ module.exports = mongoose.model('Character', characterSchema);`}</code>
           </pre>
         </li>
         <li>
-          Your local db name should remain private to you. Set up an .env file
-          and store your <code>MONGODB_URI=</code> link there. See our
-          .env.example file in the root of our project.{" "}
-          <i>Don't forget to add .env to your .gitignore file!</i>
-          <p>To access your environment variables, you need to run</p>
-          <code>{`npm i dotenv`}</code>
           <p>
-            and add this to the top of your server.js file{" "}
+            Your local db name should remain private to you. Set up an .env file
+            and store your <code>MONGODB_URI=</code> link there. See our
+            .env.example file in the root of our project.{" "}
+            <i>Don't forget to add .env to your .gitignore file!</i>
+            <br />
+            To access your environment variables, you need to run
+            <br />
+            <code>{`npm i dotenv`}</code>
+            <br />
+            and add this to the top of your server.js file
+            <br />
             <code>{`require('dotenv').config();`}</code>
           </p>
         </li>
@@ -243,20 +249,15 @@ Connection open on mongodb: [PROCESS.ENV_MONGODB_URI]`}</code>
           </div>
         </li>
       </ol>
-      <h4>c. Seed your database</h4>
-      <p>In order to seed your database, you will need:</p>
+      <h4>Seed your database</h4>
+      <p>
+        In order to seed your database, you will need access to your MONGODB_URI
+      </p>
       <div className="code-block">
         <pre>
-          <code>{`// access to your MONGODB_URI
-require('dotenv').config(); 
-
-// connection to your db
+          <code>{`require('dotenv').config(); 
 require('./lib/utils/connect')(); 
-
-// your scraper function
 const scrapeData = require('./scrapers/infoScraper'); 
-
-// your mongoose schema
 const Character = require('./lib/Models/Character');`}</code>
         </pre>
       </div>
@@ -265,14 +266,13 @@ const Character = require('./lib/Models/Character');`}</code>
       </p>
       <div className="code-block">
         <pre>
-          <code>{`// ./seed.js
+          <code>{`seed.js
 
-// don't forget to close the connection when finished!
 const mongoose = require('mongoose'); 
 
 scrapeData()
-.then(chars => Character.create(chars))
-.finally(() => mongoose.connection.close()); `}</code>
+  .then(chars => Character.create(chars))
+  .finally(() => mongoose.connection.close()); `}</code>
         </pre>
       </div>
       <p>
@@ -298,28 +298,28 @@ scrapeData()
         option. Try and bounce off ideas with other devs to come up with your
         routes.
       </p>
-      <h4>a. Get a character by id</h4>
+      <h4>Get a character by id</h4>
       <div className="code-block">
         <pre>
           <code>{`.get('/:id', (req, res, next) => {
-Character
-.findById(req.params.id)
-.select('-__v')
-.then(character => res.send(character))
-.catch(next);
-})`}</code>
+  Character
+    .findById(req.params.id)
+    .select('-__v')
+    .then(character => res.send(character))
+    .catch(next);
+  })`}</code>
         </pre>
       </div>
-      <h4>b. Get a random character(s)</h4>
+      <h4>Get a random character(s)</h4>
       <p>Our get route looks very similar here...</p>
       <div className="code-block">
         <pre>
           <code>{`.get('/random', (req, res, next) => {
-const { count = 1 } = req.query;
-Character
-.getRandom(+count)
-.then(character => res.send(character))
-.catch(next);
+  const { count = 1 } = req.query;
+  Character
+    .getRandom(+count)
+    .then(character => res.send(character))
+    .catch(next);
 })`}</code>
         </pre>
       </div>
@@ -334,11 +334,14 @@ Character
       <div className="code-block">
         <pre>
           <code>{`characterSchema.statics.getRandom = function(count) {
-return this.aggregate([{ $sample: { size: count }}, {$project: { __v: false}}]);
+  return this.aggregate([
+    { $sample: { size: count }
+    }, {$project: { __v: false} }
+  ]);
 };`}</code>
         </pre>
       </div>
-      <h4>c. Get characters + pagination + queries</h4>
+      <h4>Get characters + pagination + queries</h4>
       <p>
         For our get all characters route, we repurposed it to handle multiple
         functionalities including pagination and all queries. Check out the
@@ -347,22 +350,22 @@ return this.aggregate([{ $sample: { size: count }}, {$project: { __v: false}}]);
       <div className="code-block">
         <pre>
           <code>{`.get('/', (req, res, next) => {
-const { page = 1, perPage = 20, ...search } = req.query;
+  const { page = 1, perPage = 20, ...search } = req.query;
 
-const query = Object.entries(search)
-.reduce((query, [key, value]) => {
-  query[key] = new RegExp(value, 'gmi');
-  return query;
-}, {});
+  const query = Object.entries(search)
+    .reduce((query, [key, value]) => {
+      query[key] = new RegExp(value, 'gmi');
+      return query;
+    }, {});
 
-Character
-.find(query)
-.skip(+perPage * (+page - 1))
-.limit(+perPage)
-.lean()
-.select('-__v')
-.then(characters => res.send(characters))
-.catch(next);
+  Character
+    .find(query)
+    .skip(+perPage * (+page - 1))
+    .limit(+perPage)
+    .lean()
+    .select('-__v')
+    .then(characters => res.send(characters))
+    .catch(next);
 });`}</code>
         </pre>
       </div>

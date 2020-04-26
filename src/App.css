@@ -51,6 +51,15 @@ body {
   margin: 5em auto;
 }
 
+main {
+  margin-left: 3em;
+}
+
+ol {
+  padding: 0 5em;
+  line-height: 1.5em;
+}
+
 h1 {
   letter-spacing: 5px;
   font-family: "neon_tubes_2regular";
@@ -127,6 +136,11 @@ h3 {
 
 h4 {
   text-align: center;
+  color: ghostwhite;
+  padding: 0.5em;
+  margin: 0 auto;
+  width: fit-content;
+  border: 2px solid ghostwhite;
 }
 
 a {
@@ -149,6 +163,7 @@ code {
 .code-block {
   padding-left: 0.5rem;
   width: fit-content;
+  margin: 0 auto;
 }
 
 img {
