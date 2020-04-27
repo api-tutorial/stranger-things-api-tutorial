@@ -1,33 +1,39 @@
 import React from "react";
 import { Divider } from "../components";
+// import FileCopyIcon from "@material-ui/icons/FileCopy";
 import "../App.css";
 
 const Documentation = () => (
   <>
-    <section>
+    <section className="endpoints">
       <h3>Endpoints</h3>
-      <ul>
+      <p>stranger-things-api.herokuapp.com/</p>
+      <ul className="endpoints-list">
         <li>
-          GET /api/v1/characters - get all characters (default 20 per page)
+          <span className="bold">GET all characters</span>{" "}
+          <p>api/v1/characters</p> {/* <FileCopyIcon /> */}
         </li>
         <li>
-          GET /api/v1/characters?perPage=20?page=[Number] - edit/page through
-          character list
-        </li>
-        <li>GET /api/v1/characters/:id - get character by their id</li>
-        <li>
-          GET /api/v1/characters/random?count=[Number] - get a random character
-          (default 1)
+          <span className="bold">GET by ID</span> <p>api/v1/characters/:id</p>
         </li>
         <li>
-          GET /api/v1/characters?name=[String] - get character by their name
+          <span className="bold">GET by count</span>{" "}
+          <p>api/v1/characters/random?count=1</p>
         </li>
         <li>
-          GET /api/v1/characters?[query]=[String] - get character by a specific
-          query string (see options below)
+          <span className="bold">GET by name</span>{" "}
+          <p>api/v1/characters?name=eleven</p>
+        </li>
+        <li>
+          <span className="bold">GET by query</span>{" "}
+          <p>api/v1/characters?hairColor=brown</p>
+        </li>
+        <li>
+          <span className="bold">GET all with pagination</span>{" "}
+          <p>api/v1/characters?perPage=20?page=1</p>
         </li>
       </ul>
-      <h3>Queries available</h3>
+      <h3>Queries</h3>
       <p>
         aliases, otherRelations, affiliation, occupation, residence,
         appearsInEpisodes, status, gender, eyeColor, born, hairColor,

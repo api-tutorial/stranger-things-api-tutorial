@@ -202,3 +202,40 @@ h6 {
   flex-direction: column;
   align-items: center;
 }
+
+/* 
+
+Documentation styles below
+
+*/
+.endpoints > h3 {
+  margin-bottom: 0;
+}
+
+.endpoints > p {
+  margin-top: 0;
+}
+
+.endpoints-list > li {
+  list-style-type: none;
+  border-bottom: 1px solid #2f3336;
+  padding: 12px 12px;
+  margin: 0;
+}
+
+.endpoints-list > li > p {
+  margin: 0;
+  display: inline;
+  margin-left: 16px;
+}
+
+.endpoints-list > li:hover {
+  background-color: #202224;
+  border-left: 3px solid #effb31;
+  padding-left: 10px;
+}
+
+.bold {
+  font-weight: bold;
+  color: #d42cca;
+}

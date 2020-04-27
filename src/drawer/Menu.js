@@ -18,7 +18,6 @@ import "./menu.css";
 const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDropDownVisible, setIsDropdownVisible] = useState(false);
-
   const closeMenu = () => setIsVisible(false);
 
   return (
@@ -35,7 +34,7 @@ const Menu = () => {
         maskClosable
         keyboard
         width="265"
-        onClose={() => setIsVisible(false)}
+        onClose={closeMenu}
         visible={isVisible}
       >
         <ul>
