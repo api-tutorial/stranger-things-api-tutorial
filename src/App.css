@@ -17,18 +17,12 @@ body {
   overflow: scroll;
 }
 
-nav {
-  margin-top: 4em;
-}
-
-nav > ul {
+.tabs {
   padding: 0;
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-}
-
-.nav {
+  transform: translateY(100%);
   letter-spacing: 5px;
   font-family: "neon_tubes_2regular";
   color: #ffd5ff;
@@ -40,6 +34,13 @@ nav > ul {
     20px 0vw 20px #d42cca, 30px 0vw 200px #d42cca;
 }
 
+@media (max-width: 862px) {
+  .tabs {
+    flex-direction: column;
+    transform: translateY(50%);
+  }
+}
+
 .neon-divider {
   box-shadow: 0 0 1px #54eeff, 0 0 2px #54eeff, 0 0 6px #54eeff,
     0 0 12px #54eeff, inset 0 0 1px #54eeff, inset 0 0 2px #54eeff,
@@ -48,6 +49,15 @@ nav > ul {
   border-radius: 6px;
   width: 90%;
   margin: 5em auto;
+}
+
+main {
+  margin-left: 3em;
+}
+
+ol {
+  padding: 0 5em;
+  line-height: 1.5em;
 }
 
 h1 {
@@ -98,12 +108,10 @@ h1 {
   main {
     margin: 0 3rem;
   }
-  section {
-    margin: 0 2rem;
-  }
 }
 
 section {
+  margin: 0 2rem;
   font-family: Helvetica, Arial, sans-serif;
 }
 
@@ -119,7 +127,6 @@ p {
 h2 {
   font-weight: normal;
   text-align: center;
-  /* font-family: 'neon_tubes_2regular'; */
 }
 
 h3 {
@@ -129,6 +136,11 @@ h3 {
 
 h4 {
   text-align: center;
+  color: ghostwhite;
+  padding: 0.5em;
+  margin: 0 auto;
+  width: fit-content;
+  border: 2px solid ghostwhite;
 }
 
 a {
@@ -151,6 +163,7 @@ code {
 .code-block {
   padding-left: 0.5rem;
   width: fit-content;
+  margin: 0 auto;
 }
 
 img {
@@ -174,5 +187,5 @@ h6 {
 .json-block {
   height: 500px;
   overflow: scroll;
-  background-color: whitesmoke;
+  background-color: ghostwhite;
 }

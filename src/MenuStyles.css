@@ -1,0 +1,261 @@
+nav.nav-drawer {
+  position: fixed;
+  margin: 0;
+  top: 1em;
+  left: 1em;
+  z-index: 1;
+}
+
+.ant-btn,
+.ant-btn-secondary {
+  width: 5em;
+  height: 5em;
+  border: 2px solid ghostwhite;
+  background-color: black;
+  color: ghostwhite;
+  cursor: pointer;
+}
+
+.ant-btn:focus,
+.ant-btn:focus-within,
+.ant-btn:active {
+  outline: 5px solid #effb31;
+}
+
+.ant-btn svg {
+  font-size: 2.5rem;
+}
+
+/*  
+DRAWER STYLES 
+*/
+
+.ant-drawer {
+  position: fixed;
+  z-index: 1000;
+  width: 0%;
+  height: 100%;
+  transition: transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1), height 0s ease 0.3s,
+    width 0s ease 0.3s, -webkit-transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+}
+
+.ant-drawer > * {
+  transition: transform 0.3s cubic-bezier(0.7, 0.3, 0.1, 1),
+    box-shadow 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+}
+
+.ant-drawer .ant-drawer-content {
+  width: 100%;
+  height: 100%;
+}
+
+.ant-drawer-content {
+  position: relative;
+  z-index: 1;
+  overflow: auto;
+  background-color: ghostwhite;
+  background-clip: padding-box;
+  border: 0;
+}
+
+.ant-drawer-left {
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+}
+
+.ant-drawer-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background-color: #1b19198a;
+  opacity: 0;
+  filter: alpha(opacity=45);
+  transition: opacity 0.3s linear, height 0s ease 0.3s;
+}
+
+.ant-drawer-content-wrapper {
+  position: absolute;
+}
+
+.ant-drawer-left .ant-drawer-content-wrapper {
+  left: 0;
+  height: 100%;
+}
+
+/* 
+
+_______open drawer styles below________
+
+*/
+
+/* Inside the layout */
+
+.ant-drawer-left.ant-drawer-open .ant-drawer-content-wrapper {
+  box-shadow: 6px 0 16px -8px rgba(0, 0, 0, 0.08),
+    9px 0 28px 0 rgba(0, 0, 0, 0.05), 12px 0 48px 16px rgba(0, 0, 0, 0.03);
+}
+
+.ant-drawer-open.ant-drawer-content-wrapper {
+  width: 265px;
+}
+
+.ant-drawer.ant-drawer-open .ant-drawer-mask {
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
+  transition: none;
+  animation: antdDrawerFadeIn 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+}
+
+@keyframes antDrawerFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* DRAWER CONTENT */
+
+.ant-drawer-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+button.ant-drawer-close {
+  border: 1px solid #9c27b066;
+  background: #9c27b0a3;
+  cursor: pointer;
+  padding-bottom: 0;
+}
+
+button.ant-drawer-close:hover,
+button.ant-drawer-close:focus,
+button.ant-drawer-close:focus-within {
+  background-color: #84019a;
+}
+
+.tutorial-dropdown {
+  background-color: white;
+}
+
+.tutorial-dropdown > li:last-of-type {
+  margin: 0;
+  padding-bottom: 0.5rem;
+}
+
+.tutorial-dropdown,
+.ant-drawer-body > ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tutorial-dropdown > li.dropdown-nav-item {
+  display: flex;
+  align-items: center;
+  padding-left: 44px;
+}
+
+.tutorial-dropdown > li.dropdown-nav-item,
+li.dropdown-nav-item svg {
+  color: #216cff;
+  fill: #216cff;
+}
+
+.tutorial-dropdown > li.dropdown-nav-item > a {
+  font-size: 0.75em;
+  color: inherit;
+  padding: 8px;
+}
+
+.dropdown,
+.ant-drawer-body > ul > li.nav-item {
+  letter-spacing: 0.5px;
+  padding: 10px;
+  margin: 0;
+  padding-left: 16px;
+}
+
+.dropdown,
+.tutorial-dropdown,
+.ant-drawer-body > ul > li.nav-item a {
+  color: #9c27b0;
+  width: 100%;
+  display: block;
+}
+
+.dropdown {
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-btn {
+  border-bottom: 0.5px solid #9c27b066;
+}
+
+.dropdown svg {
+  fill: #9c27b0;
+  cursor: pointer;
+}
+
+.dropdown:focus,
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active,
+.nav-item:focus-within,
+.nav-item > a:focus,
+.nav-item > a:hover {
+  background-color: #e5e5fd;
+  outline: none;
+  text-decoration: none;
+}
+
+.ant-drawer-body > ul > li.sub-nav,
+.ant-drawer-header {
+  padding: 12px;
+  font-weight: bold;
+  background-color: white;
+  color: #216cff;
+  border-bottom: 3px solid #216cff;
+  border-top: 0.5px solid #9c27b066;
+}
+
+li.dropdown-nav-item > a:hover {
+  text-decoration: none;
+}
+
+li.dropdown-nav-item:hover,
+li.dropdown-nav-item > a:hover,
+li.dropdown-nav-item > svg:hover,
+li.dropdown-nav-item:focus,
+li.dropdown-nav-item:focus-within,
+li.dropdown-nav-item > a:focus {
+  background-color: ghostwhite;
+  text-decoration: underline;
+  outline: none;
+}
+
+li:nth-of-type(4) {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.anticon svg {
+  fill: white;
+}

@@ -1,8 +1,9 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import Filter from "./Filter";
 import "./header.css";
 
-const Test = () => (
+const Header = () => (
   <header className="container">
     <div className="centered">
       <div className="stranger-things">
@@ -16,7 +17,20 @@ const Test = () => (
       </div>
     </div>
     <Filter />
+    <ul className="tabs">
+      <li className="tab">
+        <NavLink to="/docs" activeClassName="active">
+          Documentation
+        </NavLink>
+      </li>
+      <li className="tab">
+        <NavLink to="/tutorial" activeClassName="active">
+          Tutorial
+        </NavLink>
+      </li>
+    </ul>
+    <div id="set-up" className="neon-divider"></div>
   </header>
 );
 
-export default Test;
+export default Header;
