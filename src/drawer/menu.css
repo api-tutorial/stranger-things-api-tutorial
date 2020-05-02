@@ -10,7 +10,7 @@ nav.nav-drawer {
 .ant-btn-secondary {
   width: 5em;
   height: 5em;
-  border: 2px solid #d9d9d9;
+  border: 0;
   background-color: black;
   color: #d9d9d9;
   cursor: pointer;
@@ -23,7 +23,7 @@ nav.nav-drawer {
 }
 
 .ant-btn svg {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 /*  
@@ -53,7 +53,7 @@ DRAWER STYLES
   position: relative;
   z-index: 1;
   overflow: auto;
-  background-color: ghostwhite;
+  background-color: #2f3336;
   background-clip: padding-box;
   border: 0;
 }
@@ -92,7 +92,7 @@ _______open drawer styles below________
 
 */
 
-/* Inside the layout */
+/* MASK */
 
 .ant-drawer-left.ant-drawer-open .ant-drawer-content-wrapper {
   box-shadow: 6px 0 16px -8px rgba(0, 0, 0, 0.08),
@@ -128,20 +128,14 @@ _______open drawer styles below________
 }
 
 button.ant-drawer-close {
-  border: 1px solid #9c27b066;
-  background: #9c27b0a3;
+  border: 0;
   cursor: pointer;
   padding-bottom: 0;
 }
 
-button.ant-drawer-close:hover,
-button.ant-drawer-close:focus,
-button.ant-drawer-close:focus-within {
-  background-color: #84019a;
-}
-
-.tutorial-dropdown {
-  background-color: white;
+.anticon svg {
+  fill: black;
+  font-size: 2em;
 }
 
 .tutorial-dropdown > li:last-of-type {
@@ -164,8 +158,8 @@ button.ant-drawer-close:focus-within {
 
 .tutorial-dropdown > li.dropdown-nav-item,
 li.dropdown-nav-item svg {
-  color: #216cff;
-  fill: #216cff;
+  color: #d9d9d9;
+  fill: #d9d9d9;
 }
 
 .tutorial-dropdown > li.dropdown-nav-item > a {
@@ -185,7 +179,7 @@ li.dropdown-nav-item svg {
 .dropdown,
 .tutorial-dropdown,
 .ant-drawer-body > ul > li.nav-item a {
-  color: #9c27b0;
+  color: #d9d9d9;
   width: 100%;
   display: block;
 }
@@ -203,22 +197,21 @@ li.dropdown-nav-item svg {
 }
 
 .dropdown-btn {
-  border-bottom: 0.5px solid #9c27b066;
+  border-bottom: 0.5px solid #d9d9d9;
 }
 
 .dropdown svg {
-  fill: #9c27b0;
+  fill: #d9d9d9;
   cursor: pointer;
 }
 
 .dropdown:focus,
 .nav-item:hover,
 .nav-item:focus,
-.nav-item:active,
 .nav-item:focus-within,
 .nav-item > a:focus,
 .nav-item > a:hover {
-  background-color: #e5e5fd;
+  background-color: #47444a;
   outline: none;
   text-decoration: none;
 }
@@ -227,15 +220,15 @@ li.dropdown-nav-item svg {
 .ant-drawer-header {
   padding: 12px;
   font-weight: bold;
-  background-color: white;
-  color: #216cff;
-  border-bottom: 3px solid #216cff;
-  border-top: 1px solid #9c27b066;
+  background-color: #47444a;
+  color: #d9d9d9;
+  border-bottom: 3px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
 }
 
 .ant-drawer-body > ul > li.sub-nav {
   font-weight: normal;
-  border-bottom: 1px solid #216cff;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .ant-drawer-body > ul > li.sub-nav-item {
@@ -254,7 +247,7 @@ li.dropdown-nav-item > svg:hover,
 li.dropdown-nav-item:focus,
 li.dropdown-nav-item:focus-within,
 li.dropdown-nav-item > a:focus {
-  background-color: ghostwhite;
+  background-color: #47444a;
   text-decoration: underline;
   outline: none;
 }
@@ -265,8 +258,4 @@ li:nth-of-type(4) {
 
 .hidden {
   display: none;
-}
-
-.anticon svg {
-  fill: white;
 }
