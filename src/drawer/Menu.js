@@ -111,31 +111,31 @@ const Menu = () => {
               </li>
             </ul>
           </li>
-          <li className="sub-nav">Resources</li>
-          <li className="nav-item">
+          <li className="sub-nav nav-item">Resources</li>
+          <li className="nav-item sub-nav-item">
             <a href="https://strangerthings.fandom.com/wiki/Category:Characters">
               Stranger Things fan wiki
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item sub-nav-item">
             <a href="https://nodejs.org/en/docs/guides/getting-started-guide/">
               Nodejs
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item sub-nav-item">
             <a href="https://expressjs.com/en/starter/hello-world.html">
               Expressjs
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item sub-nav-item">
             <a href="https://docs.mongodb.com/manual/tutorial/getting-started/">
               Mongodb
             </a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item sub-nav-item">
             <a href="https://mongoosejs.com/docs/index.html">Mongoose</a>
           </li>
-          <li className="nav-item">
+          <li className="nav-item sub-nav-item">
             <a href="https://devcenter.heroku.com/start">Heroku</a>
           </li>
         </ul>

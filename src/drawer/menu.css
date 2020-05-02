@@ -230,7 +230,18 @@ li.dropdown-nav-item svg {
   background-color: white;
   color: #216cff;
   border-bottom: 3px solid #216cff;
-  border-top: 0.5px solid #9c27b066;
+  border-top: 1px solid #9c27b066;
+}
+
+.ant-drawer-body > ul > li.sub-nav {
+  font-weight: normal;
+  border-bottom: 1px solid #216cff;
+}
+
+.ant-drawer-body > ul > li.sub-nav-item {
+  font-size: 0.75em;
+  padding: 8px;
+  padding-left: 36px;
 }
 
 li.dropdown-nav-item > a:hover {
