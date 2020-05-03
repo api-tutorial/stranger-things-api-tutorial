@@ -29,17 +29,12 @@ const Tutorial = () => (
           title="The boys from Stranger Things in their ghostbusters costumes"
           allowFullScreen
         ></iframe>
-        <p>
-          <a href="https://giphy.com/gifs/netflix-season-2-stranger-things-xT9Igix0cQtPCKSvV6">
-            via GIPHY
-          </a>
-        </p>
       </div>
       <p>
         This project uses Node.js, Express, Superagent, MongoDB, Mongoose, and
         node-html-parser deployed to Heroku. This tutorial requires some
-        familiarity with Node.js, Express, and MongoDB, but we have linked
-        resources for you as well. Other technologies are available!
+        familiarity with Node.js, Express, and MongoDB. Find resource links in
+        the menu. Other technologies are available!
       </p>
       <p>
         You'll need to set up a{" "}
