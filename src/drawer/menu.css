@@ -131,11 +131,16 @@ button.ant-drawer-close {
   border: 0;
   cursor: pointer;
   padding-bottom: 0;
+  background-color: transparent;
 }
 
 .anticon svg {
-  fill: black;
+  fill: #d9d9d9;
   font-size: 2em;
+}
+
+.anticon svg:hover {
+  fill: #effb31;
 }
 
 .tutorial-dropdown > li:last-of-type {
@@ -211,7 +216,7 @@ li.dropdown-nav-item svg {
 .nav-item:focus-within,
 .nav-item > a:focus,
 .nav-item > a:hover {
-  background-color: #47444a;
+  background-color: #3f4448;
   outline: none;
   text-decoration: none;
 }
@@ -220,8 +225,8 @@ li.dropdown-nav-item svg {
 .ant-drawer-header {
   padding: 12px;
   font-weight: bold;
-  background-color: #47444a;
-  color: #d9d9d9;
+  background-color: #3f4448;
+  color: #effb31;
   border-bottom: 3px solid #d9d9d9;
   border-top: 1px solid #d9d9d9;
 }
@@ -237,8 +242,11 @@ li.dropdown-nav-item svg {
   padding-left: 36px;
 }
 
-li.dropdown-nav-item > a:hover {
+li.dropdown-nav-item:hover > a,
+li.dropdown-nav-item:hover > svg {
   text-decoration: none;
+  color: #54eeff;
+  fill: #54eeff;
 }
 
 li.dropdown-nav-item:hover,

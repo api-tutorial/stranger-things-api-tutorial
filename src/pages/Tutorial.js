@@ -62,11 +62,6 @@ const Tutorial = () => (
           title="The kids from Stranger Things setting up the giant antenna"
           allowFullScreen
         ></iframe>
-        <p>
-          <a href="https://giphy.com/gifs/strangerthings-netflix-stranger-things-8P7FwgxW7FLH0LrDDZ">
-            via GIPHY
-          </a>
-        </p>
       </div>
       <p>
         We're not going to get into the details of setting up Node/Express. The
@@ -104,11 +99,6 @@ const Tutorial = () => (
               title="Hopper walking through the dark upside down tunnel with a flashlight"
               allowFullScreen
             ></iframe>
-            <p>
-              <a href="https://giphy.com/gifs/strangerthings-stranger-things-season-2-xTcf1av1seQTcwyS88">
-                via GIPHY
-              </a>
-            </p>
           </div>
           Use your browser devtools (<kbd>⌘</kbd> <kbd>shift</kbd> <kbd>c</kbd>){" "}
           to inspect the elements in the page that contain the data you're
@@ -226,11 +216,6 @@ module.exports = { scraper };
           className="giphy-embed"
           allowFullScreen
         ></iframe>
-        <p>
-          <a href="https://giphy.com/gifs/strangerthings-season-1-stranger-things-l1J9xs1aypJXKZxcY">
-            via GIPHY
-          </a>
-        </p>{" "}
       </div>
       <p>
         This data will help guide you in making decisions about how to grab
@@ -262,11 +247,6 @@ module.exports = { scraper };
           title="The demogorgon from Stranger Things"
           allowFullScreen
         ></iframe>
-        <p>
-          <a href="https://giphy.com/gifs/strangerthings-stranger-things-season-2-3o7qj3mwYZaGck0NoI">
-            via GIPHY
-          </a>
-        </p>
       </div>
       <p>
         We are using{" "}
@@ -425,11 +405,6 @@ scrapeData()
           title="Eleven stocking up on freezer waffles"
           allowFullScreen
         ></iframe>
-        <p>
-          <a href="https://giphy.com/gifs/strangerthings-season-1-stranger-things-3ohhwBauNNmMDaX984">
-            via GIPHY
-          </a>
-        </p>
       </div>
       <h4>Get a character by id</h4>
       <CodeBlock
@@ -517,11 +492,6 @@ scrapeData()
           title="Steve and Nancy from Stranger Things dancing and celebrating"
           allowFullScreen
         ></iframe>
-        <p>
-          <a href="https://giphy.com/gifs/netflix-season-2-stranger-things-3o7aCVqXn0idWFuDnO">
-            via GIPHY
-          </a>
-        </p>
       </div>
       <p>All that's left is to deploy so that other's can USE your API.</p>
       <p>
@@ -572,11 +542,6 @@ scrapeData()
           title="Mike Wheeler scribbling on paper"
           allowFullScreen
         ></iframe>
-        <p>
-          <a href="https://giphy.com/gifs/strangerthings-stranger-things-season-2-3o7qiQWUiyYlRx3fBS">
-            via GIPHY
-          </a>
-        </p>
       </div>
     </section>
     <h4>
