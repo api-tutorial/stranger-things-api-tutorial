@@ -98,7 +98,7 @@ const Tutorial = () => (
           Use your browser devtools (<kbd>⌘</kbd> <kbd>shift</kbd> <kbd>c</kbd>){" "}
           to inspect the elements in the page that contain the data you're
           trying to scrape. Does it have selectors that will be easy to target
-          when trying to retreive the data? (more about this is in
+          when trying to retreive the data? More about this is in
           <a href="#step-2"> step 2</a>.
         </li>
       </ol>
@@ -121,7 +121,7 @@ const Tutorial = () => (
         <br />
         <code>npm add -D node-html-parser superagent</code>
         <br />
-        to install both packages as dev-dependencies.
+        to install both packages as dev-dependencies
       </p>
       <p>
         Now make a <code>scraper.js</code> file at the root of your repo and add
@@ -159,7 +159,8 @@ module.exports = { scraper };
       <p>
         Open up your dev tools and inspect the elements that hold the data you
         need to scrape. In our case, the first thing we needed to do was grab
-        each <code>h3</code> header with the class <code>pi-title</code>.
+        each <code>h2</code> header with the class <code>pi-title</code> in
+        order to get the character name (e.g. Jim Hopper).
       </p>
       <div>
         <img
@@ -168,16 +169,18 @@ module.exports = { scraper };
         />
       </div>
       <p>
-        We can grab a series of elements like the <code>h3</code> by using the{" "}
+        We can grab a series of elements like the <code>h2</code> by using the{" "}
         <code>querySelectorAll</code> method on the html we get back from the
-        parser. To do this we made a helper function. Be sure to look at the
-        documentation for your npm parser to see what kinds of selectors are
-        available.
+        parser. To do this we made a helper function that takes the html as a
+        parameter, selects all of the elements that are both h2s and have the
+        class <code>pi-title</code>, then returns the <code>rawText</code> from
+        each node. Be sure to look at the documentation for your npm parser to
+        see what kinds of selector methods are available.
       </p>
       <CodeBlock
         code={`const titlesList = html => {
   return html
-    .querySelectorAll('h3 .pi-title')
+    .querySelectorAll('h2 .pi-title')
     .map(node => node.rawText);
 }`}
       />

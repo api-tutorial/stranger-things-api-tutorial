@@ -17,6 +17,10 @@ body {
   overflow: scroll;
 }
 
+s {
+  padding: 0 0.25em;
+}
+
 .tabs {
   padding: 0;
   list-style-type: none;
