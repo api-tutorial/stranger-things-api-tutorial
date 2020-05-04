@@ -120,7 +120,7 @@ _______open drawer styles below________
   }
 }
 
-/* DRAWER CONTENT */
+/* DRAWER HEADER */
 
 .ant-drawer-header {
   display: flex;
@@ -142,6 +142,12 @@ button.ant-drawer-close {
 .anticon svg:hover {
   fill: #effb31;
 }
+
+/* 
+
+TUTORIAL DROPDOWN
+
+*/
 
 .tutorial-dropdown > li:last-of-type {
   margin: 0;
@@ -215,8 +221,10 @@ li.nav-item {
 .nav-item:focus,
 .nav-item:focus-within,
 .nav-item > a:focus,
-.nav-item > a:hover {
+.nav-item > a:hover,
+.nav-item:hover > a {
   background-color: #3f4448;
+  color: ghostwhite;
   outline: none;
   text-decoration: none;
 }
@@ -227,6 +235,49 @@ li.nav-item:focus-within {
   border-left: 2px solid #effb31;
   padding-left: 14px;
 }
+
+li.dropdown-nav-item:hover,
+li.dropdown-nav-item:active,
+li.dropdown-nav-item:focus-within {
+  border-left: 2px solid #54eeff;
+  padding-left: 42px;
+  color: #54eeff;
+  /* fill: #54eeff; */
+}
+
+li.dropdown-nav-item:hover > a,
+li.dropdown-nav-item:active > svg,
+li.dropdown-nav-item:focus > svg,
+li.dropdown-nav-item:focus-within > svg,
+li.dropdown-nav-item:hover > svg {
+  text-decoration: none;
+  color: #54eeff;
+  fill: #54eeff;
+}
+
+li.dropdown-nav-item:hover,
+li.dropdown-nav-item > a:hover,
+li.dropdown-nav-item > svg:hover,
+li.dropdown-nav-item:focus,
+li.dropdown-nav-item:focus-within,
+li.dropdown-nav-item > a:focus {
+  background-color: #47444a;
+  outline: none;
+}
+
+li:nth-of-type(4) {
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 
+
+RESOURCES SUB NAVIGATION
+
+*/
 
 li.sub-nav:hover,
 li.sub-nav:focus,
@@ -258,34 +309,4 @@ li.sub-nav:focus-within {
 .ant-drawer-body > ul > li.sub-nav-item:focus,
 .ant-drawer-body > ul > li.sub-nav-item:focus-within {
   padding-left: 22px;
-}
-
-li.dropdown-nav-item:hover {
-  border-left: 2px solid #54eeff;
-  padding-left: 42px;
-}
-
-li.dropdown-nav-item:hover > a,
-li.dropdown-nav-item:hover > svg {
-  text-decoration: none;
-  color: #54eeff;
-  fill: #54eeff;
-}
-
-li.dropdown-nav-item:hover,
-li.dropdown-nav-item > a:hover,
-li.dropdown-nav-item > svg:hover,
-li.dropdown-nav-item:focus,
-li.dropdown-nav-item:focus-within,
-li.dropdown-nav-item > a:focus {
-  background-color: #47444a;
-  outline: none;
-}
-
-li:nth-of-type(4) {
-  margin: 0;
-}
-
-.hidden {
-  display: none;
 }
