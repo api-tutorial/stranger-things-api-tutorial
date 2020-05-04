@@ -174,7 +174,7 @@ li.dropdown-nav-item svg {
 }
 
 .dropdown,
-.ant-drawer-body > ul > li.nav-item {
+li.nav-item {
   letter-spacing: 0.5px;
   padding: 10px;
   margin: 0;
@@ -221,11 +221,18 @@ li.dropdown-nav-item svg {
   text-decoration: none;
 }
 
-.nav-item:hover,
-.nav-item:focus,
-.nav-item:focus-within {
+li.nav-item:hover,
+li.nav-item:focus,
+li.nav-item:focus-within {
   border-left: 2px solid #effb31;
   padding-left: 14px;
+}
+
+li.sub-nav:hover,
+li.sub-nav:focus,
+li.sub-nav:focus-within {
+  border: 0;
+  padding-left: 16px;
 }
 
 .ant-drawer-body > ul > li.sub-nav,
@@ -247,8 +254,14 @@ li.dropdown-nav-item svg {
   padding-left: 24px;
 }
 
+.ant-drawer-body > ul > li.sub-nav-item:hover,
+.ant-drawer-body > ul > li.sub-nav-item:focus,
+.ant-drawer-body > ul > li.sub-nav-item:focus-within {
+  padding-left: 22px;
+}
+
 li.dropdown-nav-item:hover {
-  border-left: 2px solid #effb31;
+  border-left: 2px solid #54eeff;
   padding-left: 42px;
 }
 
