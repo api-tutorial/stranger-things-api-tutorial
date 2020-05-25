@@ -11,7 +11,7 @@ nav.nav-drawer {
   width: 5em;
   height: 5em;
   border: 0;
-  background-color: black;
+  background-color: transparent;
   color: #d9d9d9;
   cursor: pointer;
 }
@@ -19,7 +19,7 @@ nav.nav-drawer {
 .ant-btn:focus,
 .ant-btn:focus-within,
 .ant-btn:active {
-  outline: 5px solid #effb31;
+  outline: 1px solid #effb31;
 }
 
 .ant-btn svg {
