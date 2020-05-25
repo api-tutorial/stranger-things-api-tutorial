@@ -92,8 +92,6 @@ _______open drawer styles below________
 
 */
 
-/* MASK */
-
 .ant-drawer-left.ant-drawer-open .ant-drawer-content-wrapper {
   box-shadow: 6px 0 16px -8px rgba(0, 0, 0, 0.08),
     9px 0 28px 0 rgba(0, 0, 0, 0.05), 12px 0 48px 16px rgba(0, 0, 0, 0.03);
@@ -103,6 +101,19 @@ _______open drawer styles below________
   width: 265px;
 }
 
+@media screen and (max-width: 630px) {
+  .ant-drawer-open > .ant-drawer-content-wrapper {
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .ant-drawer-open > .ant-drawer-content-wrapper {
+    width: 100vw;
+  }
+}
+
+/* MASK */
 .ant-drawer.ant-drawer-open .ant-drawer-mask {
   height: 100vh;
   width: 100vw;

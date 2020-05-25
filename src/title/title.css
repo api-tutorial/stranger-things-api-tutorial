@@ -1,3 +1,8 @@
+h1.mobileTitle {
+  text-align: center;
+  color: #d42cca;
+}
+
 .centered {
   position: absolute;
   transform: translateX(-50%);
