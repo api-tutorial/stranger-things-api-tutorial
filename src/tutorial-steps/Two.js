@@ -24,11 +24,12 @@ const Two = () => (
     <p>
       We can grab a series of elements like the <code>h2</code> by using the{" "}
       <code>querySelectorAll</code> method on the html we get back from the
-      parser. To do this we made a helper function that takes the html as a
-      parameter, selects all of the elements that are both h2s and have the
-      class <code>pi-title</code>, then returns the <code>rawText</code> from
-      each node. Be sure to look at the documentation for your npm parser to see
-      what kinds of selector methods are available.
+      parser. To do this we made a helper function called <code>titleList</code>{" "}
+      that takes a chunk of <code>html</code> as an arguement, selects all of
+      the elements that are both an <code>h2</code> and have the class{" "}
+      <code>pi-title</code>, then returns the <code>rawText</code> from each
+      node. Be sure to look at the documentation for your npm parser to see what
+      kinds of selector methods are available.
     </p>
     <CodeBlock
       code={`const titlesList = html => {
@@ -70,9 +71,27 @@ const Two = () => (
     </div>
     <p>
       This data will help guide you in making decisions about how to grab
-      different elements.This can be a messy process so roll up your sleeves and
-      setting in. You'll likely want to write and run some "clean up" functions
-      in order to start to piece it all together to match your db schema.
+      different elements. A word of warning: This can be a messy process that
+      varies each time based on the type and source of the data. It can also be
+      a fun process of discovery so roll up your sleeves and embrace it as a
+      time of learning where you can expect both moments of frustration and
+      triumphant wins along the way.
+    </p>
+    <p>
+      Finally, once you have some workable data, you'll likely need to write and
+      run some "clean up" functions in order to start to piece it all together
+      to match your db schema. In our source code, you'll find these clean up
+      functions in{" "}
+      <a href="https://github.com/api-tutorial/stranger-things-api/blob/master/scrapers/utils.js">
+        scrapers/utils.js
+      </a>
+      . They look a little overwhelming and are hard to read but keep in mind
+      that these functions were written just a little bit at a time, focusing on
+      cleaning up small bits of data until slowly we ended up with something
+      clean enough to put in our database. Try to keep your functions focused on
+      one task at a time so that they don't become too unweildly too quickly but
+      don't fret if you end up with some crazy looking code! Scrapers were never
+      meant to be elegant.
     </p>
   </section>
 );

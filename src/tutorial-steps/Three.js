@@ -9,9 +9,10 @@ const Three = () => (
     </h3>
     <p>
       Congrats! After some hard work you have some, hopefully, pretty clean data
-      to seed into a database. This part can be intimdating if you've never done
-      it before but follow the docs carefully, take your time, debug as you go -
-      and don't forget to reach out for help if you need it. Try twitter!
+      to seed into a database. The following part can be intimidating if you've
+      never done it before but follow the docs carefully, take your time, debug
+      as you go - and don't forget to reach out for help if you need it. Try
+      twitter!
     </p>
     <div className="gif">
       <iframe
@@ -33,28 +34,86 @@ const Three = () => (
       (object data modeling). The Mongoose documentation is top notch, whereas
       the MongoDB docs could use some work.{" "}
       <em>You will need MongoDB set up on your computer to follow along.</em>{" "}
-      This is how we set up our database
+      This is how we set up our database.
     </p>
-    <h4>Set up your schema</h4>
+    <h4>Schema set up</h4>
     <p>
       Your schema is how you want your data to look in your database. Basically
       it is a blueprint for MongoDB. Since all of your data is information about
       the characters of <i>Stranger Things</i> we need a Character schema. For
       each key value pair from our data, we need to specify it's type. i.e. Here
-      is the character we scraped:
+      is the character we scraped (some data left out to make it easier to
+      read):
     </p>
-    <CodeBlock code={`{ name: 'Eleven' }`} />
+    <CodeBlock
+      code={`{
+  name: 'Eleven',
+  aliases: ['El'],
+  otherRelations: ['Mike Wheeler'],
+  affiliation: ['Hawkins National Laboratory'],
+  occupation: ['Lab test subject (formerly)'],
+  residence: ['Hawkins, Indiana (1971 - 1985)'],
+  appearsInEpisodes: ['1'],
+  photo: 'somelongurl.com',
+  name: 'Eleven',
+  status: 'Alive',
+  born: 1971,
+  gender: 'Female',
+  eyeColor: 'Brown',
+  hairColor: 'Brown',
+  portrayedBy: 'Millie Bobby Brown'
+}`}
+    />
     <p>
-      So we need to tell Mongoose that we are expecting all character's names to
-      be a <code>String</code>
+      We need to tell Mongoose what type of data we are expecting: i.e., 'name'
+      should be of type <code>String</code> and 'aliases' of type{" "}
+      <code>{`[String]`}</code>; notice the square brackets around String. This
+      is to specify that all aliases are arrays of strings. The default property
+      for 'aliases' is for characters that do not have an 'aliases' field. This
+      is an optional field. (There is also an optional 'required' field, which
+      is defaulted to false but can be set true using{" "}
+      <code>required: true</code>.)
     </p>
-    <p>Here is a short snippet from Character.js:</p>
+    <p>
+      Here is the model for the Character schema found in{" "}
+      <a href="https://github.com/api-tutorial/stranger-things-api/blob/master/lib/models/Character.js">
+        Character.js
+      </a>
+      :
+    </p>
     <CodeBlock
       code={`const mongoose = require('mongoose');
 
 const characterSchema = new mongoose.Schema({
   name: String,
+  photo: String,
+  status: String,
+  born: String,
   aliases: {
+    type: [String],
+    default: ['unknown']
+  },
+  otherRelations: {
+    type: [String],
+    default: ['unknown']
+  },
+  affiliation: {
+    type: [String],
+    default: ['unknown']
+  },
+  occupation: {
+    type: [String],
+    default: ['unknown']
+  },
+  residence: {
+    type: [String],
+    default: ['unknown']
+  },
+  gender: String,
+  eyeColor: String,
+  hairColor: String,
+  portrayedBy: String,
+  appearsInEpisodes: {
     type: [String],
     default: ['unknown']
   },
@@ -63,19 +122,20 @@ const characterSchema = new mongoose.Schema({
 module.exports = mongoose.model('Character', characterSchema);`}
     />
     <p>
-      You'll notice that 'aliases' has a type <code>{`[String]`}</code>; this is
-      to specify that all aliases are arrays of strings. The default value is
-      for characters that do not have an 'aliases' field. This is an optional
-      field. (There is also an optional 'required' field, which is defaulted to
-      false.)
+      You'll notice that we've cleaned up and formatted our parsed data to match
+      the same format as our mongoose database model.
     </p>
     <h4>Set up your connection</h4>
     <ol>
       <li>
         You are going to need to connect your application to your database. We
         also want to listen for on, off, and error events for our connection.
-        Check out our connect.js file. You will see we import and call our event
-        listeners into our server.js file as{" "}
+        Check out our{" "}
+        <a href="https://github.com/api-tutorial/stranger-things-api/blob/master/lib/utils/connect.js">
+          connect.js
+        </a>{" "}
+        file in lib/utils. You will see we import and call our event listeners
+        into our server.js file as{" "}
         <pre>
           <code>{`require('lib/utils/connect.js')();`}</code>
         </pre>
@@ -91,7 +151,7 @@ module.exports = mongoose.model('Character', characterSchema);`}
           <br />
           <code>{`npm i dotenv`}</code>
           <br />
-          and add this to the top of your server.js file
+          then add the following to the top of your server.js file
           <br />
           <code>{`require('dotenv').config();`}</code>
         </p>
@@ -116,7 +176,13 @@ require('./lib/utils/connect')();
 const scrapeData = require('./scrapers/infoScraper'); 
 const Character = require('./lib/Models/Character');`}
     />
-    <p>We set all of this up in it's own file in the root of our application</p>
+    <p>
+      We set all of this up in it's own file,{" "}
+      <a href="https://github.com/api-tutorial/stranger-things-api/blob/master/seed.js">
+        seed.js
+      </a>
+      , in the root of our application
+    </p>
     <CodeBlock
       code={`seed.js
 

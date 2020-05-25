@@ -12,7 +12,7 @@ const Six = () => (
       static site like this one to display your documentation. What should you
       include? Explain in plain english each route/endpoint, how to call it, and
       what data you users can expect to get back. Consider what kind of
-      information you would need to know if you were using your own API for the
+      information you would need to know if you were using your API for the
       first time.
     </p>
     <div className="gif">

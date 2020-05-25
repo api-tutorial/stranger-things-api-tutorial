@@ -23,11 +23,11 @@ const App = () => (
       </main>
     </Router>
     <footer>
-      <h6>
+      <h5>
         Made by <a href="https://github.com/paigeegorry">Paige E. Gorry</a> and{" "}
         <a href="https://github.com/katedam">Kate Dameron</a> &copy;
         {`${new Date().getFullYear()}`}
-      </h6>
+      </h5>
     </footer>
   </div>
 );

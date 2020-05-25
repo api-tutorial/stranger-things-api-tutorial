@@ -22,7 +22,10 @@ const Five = () => (
         allowFullScreen
       ></iframe>
     </div>
-    <p>All that's left is to deploy so that other's can USE your API.</p>
+    <p>
+      All that's left is to deploy so that other's can USE your API in their own
+      projects!
+    </p>
     <p>
       We deployed to Heroku. Heroku has their own mLab noSQL database that is
       similar to MongoDB. They have documentation that will walk you through

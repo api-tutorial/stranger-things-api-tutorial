@@ -27,17 +27,17 @@ const Four = () => (
       <br />
       <br />
       When you send a request to an endpoint it is recieved as an object and one
-      the of properties on that object can be the "query" which can equal
-      whatever you want it to such as a count to get a certain number of
-      characters or a character name. Check out our{" "}
-      <a href="/docs">documentation</a> page to try out using queries!
+      of the properties on that object is the "query" which can equal whatever
+      you want it to such as a count to get a certain number of characters or a
+      character name. Check out our <a href="/docs">documentation</a> page to
+      try out using queries!
     </p>
     <h4>Hot Tip</h4>
     <p>
       We recommend thinking from your user's point of view when deciding what
-      routes to build. What data would your users want? If you have <i>a lot</i>{" "}
-      of data, consider pagination as an option. Try bouncing off ideas with
-      other devs to come up with solutions.
+      routes to build. What data would your users want? If you have{" "}
+      <em>a lot</em> of data, consider pagination as an option. Try bouncing off
+      ideas with other devs to come up with solutions.
     </p>
     <div className="gif">
       <iframe
@@ -60,8 +60,8 @@ const Four = () => (
     .catch(next);
   })`}
     />
-    <h4>Get a random character(s)</h4>
-    <p>Our get route looks very similar here...</p>
+    <h4>GET a random character(s)</h4>
+    <p>Our GET route looks very similar here...</p>
     <CodeBlock
       code={`.get('/random', (req, res, next) => {
   const { count = 1 } = req.query;
@@ -73,7 +73,7 @@ const Four = () => (
     />
     <p>
       You'll notice a custom static method called 'getRandom' being used. This
-      method returns a randome entry aka a random character from the database
+      method returns a random entry aka a random character from the database
       using the aggregation shown in the method. You can create your own static
       methods in your model schema. Check out the{" "}
       <a href="https://mongoosejs.com/docs/2.7.x/docs/methods-statics.html">
@@ -89,9 +89,9 @@ const Four = () => (
   ]);
 };`}
     />
-    <h4>Get characters + pagination + queries</h4>
+    <h4>GET characters + pagination + queries</h4>
     <p>
-      For our get all characters endpoint, we repurposed it to handle multiple
+      For our GET all characters endpoint, we repurposed it to handle multiple
       functionalities including pagination and all queries. Check out the source
       code:
     </p>

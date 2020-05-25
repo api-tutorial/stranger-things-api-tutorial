@@ -136,7 +136,18 @@ const Menu = () => {
             <a href="https://mongoosejs.com/docs/index.html">Mongoose</a>
           </li>
           <li className="nav-item sub-nav-item">
+            <a href="https://robomongo.org/">Robo3T</a>
+          </li>
+          <li className="nav-item sub-nav-item">
             <a href="https://devcenter.heroku.com/start">Heroku</a>
+          </li>
+          <li className="nav-item sub-nav-item">
+            <a href="https://www.npmjs.com/package/node-html-parser">
+              node-html-parser
+            </a>
+          </li>
+          <li className="nav-item sub-nav-item">
+            <a href="https://www.npmjs.com/package/superagent">superagent</a>
           </li>
         </ul>
       </Drawer>

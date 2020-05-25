@@ -21,6 +21,21 @@ s {
   padding: 0 0.25em;
 }
 
+.twitter-handles {
+  display: flex;
+  justify-content: flex-start;
+  padding-bottom: 2em;
+}
+
+.twitter-img {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2em;
+}
+
 .tabs {
   padding: 0;
   list-style-type: none;
@@ -60,7 +75,6 @@ main {
 }
 
 ol {
-  padding: 0 5em;
   line-height: 1.5em;
 }
 
@@ -115,7 +129,7 @@ h1 {
 }
 
 section {
-  padding: 0 2rem;
+  padding: 0.75rem;
   font-family: Helvetica, Arial, sans-serif;
   border: 1px solid #2f3336;
 }
@@ -125,7 +139,6 @@ li {
 }
 
 p {
-  padding: 0.75rem;
   line-height: 2.5rem;
 }
 
@@ -180,7 +193,7 @@ img {
   width: 100%;
 }
 
-h6 {
+h5 {
   text-align: center;
 }
 
