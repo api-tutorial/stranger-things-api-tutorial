@@ -17,6 +17,10 @@ body {
   overflow: scroll;
 }
 
+header {
+  margin-top: 5rem;
+}
+
 s {
   padding: 0 0.25em;
 }
@@ -132,6 +136,7 @@ section {
   padding: 0.75rem;
   font-family: Helvetica, Arial, sans-serif;
   border: 1px solid #2f3336;
+  margin: 0 1rem 0 2rem;
 }
 
 li {
@@ -151,6 +156,7 @@ h3 {
   color: #effb31;
   font-weight: normal;
   display: flex;
+  align-items: center;
 }
 
 h3 > svg {
@@ -300,4 +306,13 @@ Documentation styles below
 .bold {
   font-weight: bold;
   color: #d42cca;
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 0;
+  }
+  section {
+    margin: 0;
+  }
 }

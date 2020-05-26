@@ -119,7 +119,10 @@ const characterSchema = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model('Character', characterSchema);`}
+module.exports = mongoose.model(
+  'Character',
+  characterSchema
+);`}
     />
     <p>
       You'll notice that we've cleaned up and formatted our parsed data to match

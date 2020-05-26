@@ -9,11 +9,14 @@ const Six = () => (
     <p>
       Take the time to document your application in a README.md. If you're also
       learning front end developement, use this as an opportunity to build a
-      static site like this one to display your documentation. What should you
-      include? Explain in plain english each route/endpoint, how to call it, and
-      what data you users can expect to get back. Consider what kind of
-      information you would need to know if you were using your API for the
-      first time.
+      static site like this one to display your documentation.
+    </p>
+    <p>
+      What should you include? Explain in plain english each route/endpoint, how
+      to use it, and what data your users can expect to get back. Consider what
+      kind of information you would need to know if you were using your API for
+      the first time. Check out our approach to this on our{" "}
+      <a href="/docs">docs</a> page.
     </p>
     <div className="gif">
       <iframe
