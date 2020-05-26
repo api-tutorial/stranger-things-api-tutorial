@@ -8,8 +8,8 @@ const Five = () => (
     </h3>
     <p>
       That's it, you did it! You scraped your own data, cleaned it up pretty
-      good, seeded your database and set up a router so users can retreive that
-      data using various endpoints.
+      good, seeded a database, and set up various endpoints for fetching said
+      data.
     </p>
     <div className="gif">
       <iframe
@@ -23,8 +23,8 @@ const Five = () => (
       ></iframe>
     </div>
     <p>
-      All that's left is to deploy so that other's can USE your API in their own
-      projects!
+      All that's left is to deploy so that other devs can <em>USE</em> your API
+      in their own projects!
     </p>
     <p>
       We deployed to Heroku. Heroku has their own mLab noSQL database that is
