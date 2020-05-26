@@ -156,6 +156,7 @@ h3 {
   color: #effb31;
   font-weight: normal;
   display: flex;
+  align-items: center;
 }
 
 h3 > svg {
