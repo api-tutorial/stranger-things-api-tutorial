@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useWindowSize } from "../hooks/useWindowSize";
 import { Drawer } from "antd";
 import Button from "./Button";
 import {
@@ -19,6 +20,7 @@ const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDropDownVisible, setIsDropdownVisible] = useState(false);
   const closeMenu = () => setIsVisible(false);
+  const isMobile = useWindowSize().width < 600;
 
   return (
     <nav className="nav-drawer">
@@ -33,7 +35,7 @@ const Menu = () => {
         mask
         maskClosable
         keyboard
-        width="265"
+        width={isMobile ? "100vw" : "265"}
         onClose={closeMenu}
         visible={isVisible}
       >

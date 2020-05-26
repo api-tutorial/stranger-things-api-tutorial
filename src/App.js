@@ -10,17 +10,23 @@ import { Tabs, Divider } from "./components";
 import { useWindowSize } from "./hooks/useWindowSize";
 
 const App = () => {
-  const isMobile = useWindowSize().width < 600;
+  const isMobile = useWindowSize().width < 620;
   return (
     <div className="App">
       <Menu />
       <Router>
-        <header className="container">
-          {!isMobile && <Title />}
-          {!isMobile && <Tabs />}
-          {isMobile && <MobileTitle />}
-          <Divider />
-        </header>
+        {!isMobile && (
+          <header className="container">
+            <Title />
+            <Tabs />
+            <Divider />
+          </header>
+        )}
+        {isMobile && (
+          <header className="container">
+            <MobileTitle />
+          </header>
+        )}
         <main>
           <Route exact path="/" render={() => <Redirect to="/docs" />} />
           <Route path="/docs" component={Documentation} />

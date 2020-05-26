@@ -2,7 +2,7 @@ nav.nav-drawer {
   position: fixed;
   margin: 0;
   top: 1em;
-  left: 1em;
+  left: 0.5em;
   z-index: 1;
 }
 
@@ -311,7 +311,7 @@ li.sub-nav:focus-within {
 }
 
 .ant-drawer-body > ul > li.sub-nav-item {
-  font-size: calc(3px + 2vmin);
+  font-size: 0.85rem;
   padding: 8px;
   padding-left: 24px;
 }
@@ -320,4 +320,29 @@ li.sub-nav:focus-within {
 .ant-drawer-body > ul > li.sub-nav-item:focus,
 .ant-drawer-body > ul > li.sub-nav-item:focus-within {
   padding-left: 22px;
+}
+
+/* Media queries */
+
+@media (max-width: 600px) {
+  .dropdown,
+  li.nav-item {
+    font-size: x-large;
+  }
+
+  .tutorial-dropdown > li.dropdown-nav-item > a {
+    font-size: 1.25rem;
+  }
+
+  .ant-drawer-body > ul > li.sub-nav-item {
+    font-size: 1.25rem;
+  }
+
+  nav.nav-drawer {
+    top: 0;
+    left: 0;
+    background-color: black;
+    border-bottom: 1px solid #2f3336;
+    width: 100vw;
+  }
 }

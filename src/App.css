@@ -260,3 +260,12 @@ Documentation styles below
   font-weight: bold;
   color: #d42cca;
 }
+
+@media (max-width: 600px) {
+  main {
+    margin: 0;
+  }
+  section {
+    margin: 0;
+  }
+}
