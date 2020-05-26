@@ -15,12 +15,12 @@ const Sandbox = () => {
   return (
     <section id="endpoint-sandbox">
       <div>
-        <label htmlFor="endpoint">Try out an endpoint:</label>
-        <p>
-        /api/v1/characters
-        <input value={userInput} onChange={({target}) => setUserInput(target.value)}/>
+        <label htmlFor="endpoint"><h3>Try out an endpoint:</h3></label>
+        <p id="user-input">
+        <span>/api/v1/characters/
+        <input id="endpoint-input" placeholder="example: random" value={userInput} onChange={({target}) => setUserInput(target.value)}/></span>
+        <button id="submit-btn" onClick={() => fetchData()}>Submit</button>
         </p>
-        <h4><button onClick={() => fetchData()}>Submit</button></h4>
       </div>
       <aside id="endpoint-results">
         <div className="json-block"><pre>{JSON.stringify(data, null, 1)}</pre></div>

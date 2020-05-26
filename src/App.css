@@ -163,7 +163,6 @@ h4 {
   padding: 0.5em;
   margin: 0 auto;
   width: fit-content;
-  /* border: 2px solid #d9d9d9; */
 }
 
 a {
@@ -208,10 +207,37 @@ h5 {
 }
 
 .json-block {
-  color: black;
+  color: ghostwhite;
   height: 500px;
   overflow: scroll;
-  background-color: ghostwhite;
+  background-color: #2f3336;
+  padding: 5px;
+}
+
+#endpoint-input {
+  background-color: #2f3336;
+  box-shadow: none;
+}
+
+#user-input {
+  width: 75%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#submit-btn {
+  background: black;
+  color: ghostwhite;
+  padding: 10px;
+  width: 200px;
+  border: 2px solid #2f3336
+}
+
+#submit-btn:hover {
+  background: #2f3336;
+  border: 2px solid black;
 }
 
 .gif {
@@ -233,23 +259,42 @@ Documentation styles below
   margin-top: 0;
 }
 
-.endpoints-list > li {
+.endpoints-list {
+  background-color:black;
+}
+
+.MuiExpansionPanelDetails-root > div > pre {
+  background: #2f3336
+}
+
+.endpoints-list > div {
   list-style-type: none;
   border-bottom: 1px solid #2f3336;
   padding: 12px 12px;
   margin: 0;
 }
 
-.endpoints-list > li > p {
+.endpoints-list > div > p {
   margin: 0;
   display: inline;
   margin-left: 16px;
 }
 
-.endpoints-list > li:hover {
+.endpoints-list > div:hover {
   background-color: #202224;
   border-left: 3px solid #effb31;
   padding-left: 10px;
+}
+
+.example-json {
+  background: #202224;
+  width: inherit;
+  display: inline-block;
+}
+
+.example-json > pre {
+  overflow-y: auto;
+  height: 300px;
 }
 
 .bold {
