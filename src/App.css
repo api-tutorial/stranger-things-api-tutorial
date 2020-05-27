@@ -223,6 +223,14 @@ h5 {
 #endpoint-input {
   background-color: #2f3336;
   box-shadow: none;
+  margin-left: 1em;
+  width: 300px;
+  height: 16px;
+  padding: 4px;
+}
+
+input::placeholder{
+  color: #fff;
 }
 
 #user-input {
@@ -242,6 +250,7 @@ h5 {
 }
 
 #submit-btn:hover {
+  cursor: pointer;
   background: #2f3336;
   border: 2px solid black;
 }
@@ -263,6 +272,17 @@ Documentation styles below
 
 .endpoints > p {
   margin-top: 0;
+}
+
+.endpoints > ul {
+  padding: 0;
+  margin: 0;
+}
+
+.endpoints > ul > li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .endpoints-list {
@@ -301,11 +321,14 @@ Documentation styles below
 .example-json > pre {
   overflow-y: auto;
   height: 300px;
+  border: 1px solid #d42cca;
+  padding: 10px;
 }
 
 .bold {
   font-weight: bold;
   color: #d42cca;
+  margin-right: 10px;
 }
 
 @media (max-width: 600px) {
