@@ -10,11 +10,6 @@ import {
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import "../App.css";
 
-const panelStyle = {
-  background: "black",
-  color: "#d9d9d9",
-};
-
 const expandIcon = <ExpandMoreIcon style={{ color: "white" }} />;
 
 const Documentation = () => {
@@ -32,7 +27,6 @@ const Documentation = () => {
         <ul className="endpoints-list">
           <li>
             <ExpansionPanel
-              style={panelStyle}
               expanded={expanded === "panel1"}
               onChange={handleChange("panel1")}
             >
@@ -40,6 +34,7 @@ const Documentation = () => {
                 expandIcon={expandIcon}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
+                className={expanded === "panel1" ? "active-item" : ""}
               >
                 <span className="bold">GET all characters</span>{" "}
                 /api/v1/characters
@@ -51,7 +46,6 @@ const Documentation = () => {
           </li>
           <li>
             <ExpansionPanel
-              style={panelStyle}
               expanded={expanded === "panel2"}
               onChange={handleChange("panel2")}
             >
@@ -59,6 +53,7 @@ const Documentation = () => {
                 expandIcon={expandIcon}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
+                className={expanded === "panel2" ? "active-item" : ""}
               >
                 <span className="bold">GET by ID</span> /api/v1/characters/:id
               </ExpansionPanelSummary>
@@ -69,7 +64,6 @@ const Documentation = () => {
           </li>
           <li>
             <ExpansionPanel
-              style={panelStyle}
               expanded={expanded === "panel3"}
               onChange={handleChange("panel3")}
             >
@@ -77,6 +71,7 @@ const Documentation = () => {
                 expandIcon={expandIcon}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
+                className={expanded === "panel3" ? "active-item" : ""}
               >
                 <span className="bold">GET random character(s)</span>{" "}
                 /api/v1/characters/random?count=1
@@ -88,7 +83,6 @@ const Documentation = () => {
           </li>
           <li>
             <ExpansionPanel
-              style={panelStyle}
               expanded={expanded === "panel4"}
               onChange={handleChange("panel4")}
             >
@@ -96,6 +90,7 @@ const Documentation = () => {
                 expandIcon={expandIcon}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
+                className={expanded === "panel4" ? "active-item" : ""}
               >
                 <span className="bold">GET by query</span>{" "}
                 /api/v1/characters?name=Mike+Wheeler
@@ -115,7 +110,6 @@ const Documentation = () => {
           </li>
           <li>
             <ExpansionPanel
-              style={panelStyle}
               expanded={expanded === "panel5"}
               onChange={handleChange("panel5")}
             >
@@ -123,6 +117,7 @@ const Documentation = () => {
                 expandIcon={expandIcon}
                 aria-controls="panel1a-content"
                 id="panel1a-header"
+                className={expanded === "panel5" ? "active-item" : ""}
               >
                 <span className="bold">GET all with pagination</span>{" "}
                 /api/v1/characters?perPage=5?page=1

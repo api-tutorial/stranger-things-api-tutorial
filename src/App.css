@@ -263,7 +263,7 @@ input::placeholder {
 
 /* 
 
-Documentation styles below
+Expansion panel styles below
 
 */
 .endpoints > h3 {
@@ -289,6 +289,11 @@ Documentation styles below
   background-color: black;
 }
 
+div.MuiExpansionPanel-root {
+  background-color: black;
+  color: #d9d9d9;
+}
+
 .MuiExpansionPanelDetails-root > div > pre {
   background: #2f3336;
 }
@@ -306,11 +311,12 @@ Documentation styles below
   margin-left: 16px;
 }
 
-.active-item,
 .MuiExpansionPanelSummary-root:hover:not(.Mui-disabled) {
   background-color: #202224;
   border-left: 3px solid #effb31;
   padding-left: 13px;
+  border-bottom: 1px solid #2f3336;
+  border-top: 1px solid #2f3336;
 }
 
 .MuiExpansionPanelSummary-content {
@@ -344,6 +350,13 @@ div.MuiExpansionPanelDetails-root {
 .queries-box {
   padding: 10px;
   color: #d9d9d9;
+  border-top: 1px solid #2f3336;
+}
+
+div.active-item {
+  background-color: #202224;
+  border-left: 3px solid #effb31;
+  padding-left: 13px;
 }
 
 @media (max-width: 600px) {
