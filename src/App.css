@@ -229,7 +229,7 @@ h5 {
   padding: 4px;
 }
 
-input::placeholder{
+input::placeholder {
   color: #fff;
 }
 
@@ -246,7 +246,7 @@ input::placeholder{
   color: ghostwhite;
   padding: 10px;
   width: 200px;
-  border: 2px solid #2f3336
+  border: 2px solid #2f3336;
 }
 
 #submit-btn:hover {
@@ -286,30 +286,35 @@ Documentation styles below
 }
 
 .endpoints-list {
-  background-color:black;
+  background-color: black;
 }
 
 .MuiExpansionPanelDetails-root > div > pre {
-  background: #2f3336
+  background: #2f3336;
 }
 
-.endpoints-list > div {
+.endpoints-list > li {
   list-style-type: none;
   border-bottom: 1px solid #2f3336;
   padding: 12px 12px;
   margin: 0;
 }
 
-.endpoints-list > div > p {
+.endpoints-list > li > .MuiExpansionPanelSummary-root {
   margin: 0;
   display: inline;
   margin-left: 16px;
 }
 
-.endpoints-list > div:hover {
+.active-item,
+.MuiExpansionPanelSummary-root:hover:not(.Mui-disabled) {
   background-color: #202224;
   border-left: 3px solid #effb31;
-  padding-left: 10px;
+  padding-left: 13px;
+}
+
+.MuiExpansionPanelSummary-content {
+  color: #d9d9d9;
 }
 
 .example-json {
@@ -318,17 +323,27 @@ Documentation styles below
   display: inline-block;
 }
 
-.example-json > pre {
+div.MuiExpansionPanelDetails-root {
+  padding: 0;
+}
+
+.MuiExpansionPanelDetails-root.example-json > pre {
   overflow-y: auto;
   height: 300px;
   border: 1px solid #d42cca;
   padding: 10px;
+  margin: 0;
 }
 
 .bold {
   font-weight: bold;
   color: #d42cca;
   margin-right: 10px;
+}
+
+.queries-box {
+  padding: 10px;
+  color: #d9d9d9;
 }
 
 @media (max-width: 600px) {
