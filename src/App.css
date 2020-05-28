@@ -205,6 +205,10 @@ h5 {
 #endpoint-sandbox {
   display: flex;
   flex-direction: column;
+  color: #d9d9d9;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 #endpoint-sandbox h4 {
@@ -225,20 +229,31 @@ h5 {
   box-shadow: none;
   margin-left: 1em;
   width: 300px;
-  height: 16px;
+  height: 24px;
   padding: 4px;
+  border: 0.5px solid #d9d9d9;
+  color: #d9d9d9;
+  font-size: 0.7em;
 }
 
 input::placeholder {
-  color: #fff;
+  color: #d9d9d9;
+}
+
+input:focus {
+  outline: 1px solid #effb31;
 }
 
 #user-input {
   width: 75%;
-  margin: 0 auto;
   margin-bottom: 10px;
   display: flex;
-  justify-content: space-around;
+  align-items: center;
+  margin-left: 1em;
+}
+
+#user-input > label {
+  width: 100%;
 }
 
 #submit-btn {
@@ -246,13 +261,15 @@ input::placeholder {
   color: ghostwhite;
   padding: 10px;
   width: 200px;
-  border: 2px solid #2f3336;
+  border: 1px solid #d9d9d9;
+  font-size: 0.75em;
 }
 
 #submit-btn:hover {
   cursor: pointer;
-  background: #2f3336;
-  border: 2px solid black;
+  background: #d42cca;
+  border: 1px solid black;
+  color: #d9d9d9;
 }
 
 .gif {

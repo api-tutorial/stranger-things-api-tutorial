@@ -128,9 +128,9 @@ const Documentation = () => {
             </ExpansionPanel>
           </li>
         </ul>
+        {/* <Divider /> */}
+        <Sandbox />
       </section>
-      <Divider />
-      <Sandbox />
     </>
   );
 };
