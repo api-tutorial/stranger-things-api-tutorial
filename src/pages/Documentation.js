@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Divider } from "../components";
 import Sandbox from "../Sandbox";
 import data from "../data/example-data.json";
 import {
@@ -128,7 +127,6 @@ const Documentation = () => {
             </ExpansionPanel>
           </li>
         </ul>
-        {/* <Divider /> */}
         <Sandbox />
       </section>
     </>
