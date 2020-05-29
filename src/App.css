@@ -169,7 +169,6 @@ h4 {
   padding: 0.5em;
   margin: 0 auto;
   width: fit-content;
-  /* border: 2px solid #d9d9d9; */
 }
 
 a {
@@ -206,6 +205,10 @@ h5 {
 #endpoint-sandbox {
   display: flex;
   flex-direction: column;
+  color: #d9d9d9;
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 #endpoint-sandbox h4 {
@@ -214,9 +217,59 @@ h5 {
 }
 
 .json-block {
+  color: ghostwhite;
   height: 500px;
   overflow: scroll;
-  background-color: ghostwhite;
+  background-color: #2f3336;
+  padding: 5px;
+}
+
+#endpoint-input {
+  background-color: #2f3336;
+  box-shadow: none;
+  margin-left: 1em;
+  width: 300px;
+  height: 24px;
+  padding: 4px;
+  border: 0.5px solid #d9d9d9;
+  color: #d9d9d9;
+  font-size: 0.7em;
+}
+
+input::placeholder {
+  color: #d9d9d9;
+}
+
+input:focus {
+  outline: 1px solid #effb31;
+}
+
+#user-input {
+  width: 75%;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+
+#user-input > label {
+  width: 100%;
+}
+
+#submit-btn {
+  background: black;
+  color: ghostwhite;
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #d9d9d9;
+  font-size: 0.75em;
+}
+
+#submit-btn:hover {
+  cursor: pointer;
+  background: #d42cca;
+  border: 1px solid black;
+  color: #d9d9d9;
 }
 
 .gif {
@@ -227,7 +280,7 @@ h5 {
 
 /* 
 
-Documentation styles below
+Expansion panel styles below
 
 */
 .endpoints > h3 {
@@ -238,6 +291,30 @@ Documentation styles below
   margin-top: 0;
 }
 
+.endpoints > ul {
+  padding: 0;
+  margin: 0;
+}
+
+.endpoints > ul > li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.endpoints-list {
+  background-color: black;
+}
+
+div.MuiExpansionPanel-root {
+  background-color: black;
+  color: #d9d9d9;
+}
+
+.MuiExpansionPanelDetails-root > div > pre {
+  background: #2f3336;
+}
+
 .endpoints-list > li {
   list-style-type: none;
   border-bottom: 1px solid #2f3336;
@@ -245,21 +322,58 @@ Documentation styles below
   margin: 0;
 }
 
-.endpoints-list > li > p {
+.endpoints-list > li > .MuiExpansionPanelSummary-root {
   margin: 0;
   display: inline;
   margin-left: 16px;
 }
 
-.endpoints-list > li:hover {
+.MuiExpansionPanelSummary-root:hover:not(.Mui-disabled) {
   background-color: #202224;
   border-left: 3px solid #effb31;
-  padding-left: 10px;
+  padding-left: 13px;
+  border-bottom: 1px solid #2f3336;
+  border-top: 1px solid #2f3336;
+}
+
+.MuiExpansionPanelSummary-content {
+  color: #d9d9d9;
+}
+
+.example-json {
+  background: #202224;
+  width: inherit;
+  display: inline-block;
+}
+
+div.MuiExpansionPanelDetails-root {
+  padding: 0;
+}
+
+.MuiExpansionPanelDetails-root.example-json > pre {
+  overflow-y: auto;
+  height: 300px;
+  border: 1px solid #d42cca;
+  padding: 10px;
+  margin: 0;
 }
 
 .bold {
   font-weight: bold;
   color: #d42cca;
+  margin-right: 10px;
+}
+
+.queries-box {
+  padding: 10px;
+  color: #d9d9d9;
+  border-top: 1px solid #2f3336;
+}
+
+div.active-item {
+  background-color: #202224;
+  border-left: 3px solid #effb31;
+  padding-left: 13px;
 }
 
 @media (max-width: 600px) {

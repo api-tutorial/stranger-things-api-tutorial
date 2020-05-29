@@ -114,7 +114,7 @@ The default value is for characters that do not have an 'aliases' field. This is
 
 #### b. Set up your connection
 
-1. You are going to need to connect your application to your database. We also want to listen for on, off, and error events for our connection. Check out our connect.js file. You will see we import and call our event listeners into our server.js file as 
+1. You are going to need to connect your application to your database. We also want to listen for on, off, and error events for our connection. Check out our connect.js file. You will see we import and call our event listeners in our server.js file as 
 
     `require('lib/utils/connect.js')();`
 

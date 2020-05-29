@@ -12,7 +12,7 @@ const Six = () => (
       static site like this one to display your documentation.
     </p>
     <p>
-      What should you include? Explain in plain english each route/endpoint, how
+      What should you include? Clearly explain each route/endpoint, how
       to use it, and what data your users can expect to get back. Consider what
       kind of information you would need to know if you were using your API for
       the first time. Check out our approach to this on our{" "}

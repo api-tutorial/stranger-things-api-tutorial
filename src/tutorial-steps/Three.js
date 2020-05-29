@@ -138,7 +138,7 @@ module.exports = mongoose.model(
           connect.js
         </a>{" "}
         file in lib/utils. You will see we import and call our event listeners
-        into our server.js file as{" "}
+        in our server.js file as{" "}
         <pre>
           <code>{`require('lib/utils/connect.js')();`}</code>
         </pre>
@@ -187,12 +187,10 @@ const Character = require('./lib/Models/Character');`}
       , in the root of our application
     </p>
     <CodeBlock
-      code={`seed.js
-
-const mongoose = require('mongoose'); 
+      code={`const mongoose = require('mongoose'); 
 
 scrapeData()
-  .then(chars => Character.create(chars))
+  .then(characters => Character.create(characters))
   .finally(() => mongoose.connection.close()); `}
     />
     <p>
