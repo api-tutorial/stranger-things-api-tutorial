@@ -35,8 +35,8 @@ const Documentation = () => {
                 id="panel1a-header"
                 className={expanded === "panel1" ? "active-item" : ""}
               >
-                <span className="bold">GET all characters</span>{" "}
-                /api/v1/characters
+                <span className="bold">GET all characters</span>
+                <span>/api/v1/characters</span>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails className="example-json">
                 <pre>{JSON.stringify(data.all, null, 1)}</pre>
@@ -54,7 +54,8 @@ const Documentation = () => {
                 id="panel1a-header"
                 className={expanded === "panel2" ? "active-item" : ""}
               >
-                <span className="bold">GET by ID</span> /api/v1/characters/:id
+                <span className="bold">GET by ID</span>
+                <span>/api/v1/characters/:id</span>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails className="example-json">
                 <pre>{JSON.stringify(data.id, null, 1)}</pre>

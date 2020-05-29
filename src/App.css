@@ -152,11 +152,14 @@ h2 {
   text-align: center;
 }
 
-h3 {
+h3,
+legend {
   color: #effb31;
   font-weight: normal;
   display: flex;
   align-items: center;
+  margin: 1em 0;
+  font-size: 1.17em;
 }
 
 h3 > svg {
@@ -207,7 +210,7 @@ h5 {
   flex-direction: column;
   color: #d9d9d9;
   border: none;
-  margin: 0;
+  margin: 4em 0;
   padding: 0;
 }
 
@@ -250,9 +253,16 @@ input:focus {
   display: flex;
   align-items: center;
   margin-left: 1em;
+  justify-content: space-between;
+  padding: 0.5em;
 }
 
-#user-input > label {
+fieldset {
+  padding: 0;
+  border: none;
+}
+
+fieldset > label {
   width: 100%;
 }
 
@@ -336,7 +346,7 @@ div.MuiExpansionPanel-root {
   border-top: 1px solid #2f3336;
 }
 
-.MuiExpansionPanelSummary-content {
+div.MuiExpansionPanelSummary-content {
   color: #d9d9d9;
 }
 
@@ -376,11 +386,38 @@ div.active-item {
   padding-left: 13px;
 }
 
+#endpoint-results {
+  border: 1px solid #2f3336;
+}
+
+@media (max-width: 795px) {
+  div.MuiExpansionPanelSummary-content {
+    flex-direction: column;
+  }
+}
+
 @media (max-width: 600px) {
   main {
     margin: 0;
   }
   section {
     margin: 0;
+  }
+  #endpoint-input {
+    width: 100%;
+  }
+  #user-input {
+    width: calc(100vw - 55px);
+  }
+}
+
+@media (max-width: 1115px) {
+  #user-input {
+    flex-direction: column;
+    margin: 0;
+    align-items: flex-start;
+  }
+  #endpoint-input {
+    margin: 1em 0;
   }
 }

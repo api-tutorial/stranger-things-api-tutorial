@@ -16,11 +16,11 @@ const Sandbox = () => {
 
   return (
     <section id="endpoint-sandbox">
-      <div>
-        <h3>Try out an endpoint:</h3>
-        <div id="user-input">
-          <label>
-            /api/v1/characters
+      <form>
+        <fieldset>
+          <legend>Try out an endpoint:</legend>
+          <div id="user-input">
+            <label htmlFor="endpoint-input">/api/v1/characters</label>
             <input
               id="endpoint-input"
               placeholder="example: /random"
@@ -28,12 +28,12 @@ const Sandbox = () => {
               onChange={({ target }) => setUserInput(target.value)}
               aria-label="Try out an endpoint by finishing the url /api/v1/characters"
             />
-          </label>
-          <button id="submit-btn" onClick={() => fetchData()}>
-            Submit
-          </button>
-        </div>
-      </div>
+            <button id="submit-btn" onClick={() => fetchData()}>
+              Try It
+            </button>
+          </div>
+        </fieldset>
+      </form>
       <aside id="endpoint-results">
         <div className="json-block">
           <pre>{JSON.stringify(data, null, 1)}</pre>
