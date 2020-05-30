@@ -29,8 +29,8 @@ const App = () => {
         )}
         <main>
           <Route exact path="/" render={() => <Redirect to="/docs" />} />
-          <Route path="/docs" component={Documentation} />
-          <Route path="/tutorial" component={Tutorial} />
+          <Route exact path="/docs" component={Documentation} />
+          <Route exact path="/tutorial" component={Tutorial} />
         </main>
       </Router>
       <footer>
