@@ -9,8 +9,10 @@ This project uses Node.js, Express, Superagent, MongoDB, Mongoose, and node-html
 For this project you'll need to set up a Node.js server. We used Express.js but you can use whatever you want! Check out [this tutorial](https://www.guru99.com/node-js-express.html).
 
 ### Things to consider before scraping:
-Think about what you are scraping and how often that data changes. 
-  ###### If you are scraping data for a streaming service (Netflix, Hulu, etc.), think about how often shows are added to those sites. Do you have a schedule for how you want to maintain your API to keep it up to date? How will you maintain versioning on your API? 
+
+Think about what you are scraping and how often that data changes.
+
+###### If you are scraping data for a streaming service (Netflix, Hulu, etc.), think about how often shows are added to those sites. Do you have a schedule for how you want to maintain your API to keep it up to date? How will you maintain versioning on your API?
 
 ### Step 1: Get set up to scrape some data!
 
@@ -72,9 +74,9 @@ const scraper = () => {
 
 run `node scraper.js` again
 
-At this point you should be able to see the data and start to make decisions about how to grab different elements, run some clean up functions and start to piece it all together to match your db schema.
+At this point you should be able to see the data and start to make decisions about how to grab different elements, run some clean up functions and start to piece it all together to match your database schema.
 
-### Step 3: Database 
+### Step 3: Database
 
 _We are using [MongoDB](https://docs.mongodb.com/manual/tutorial/getting-started/) with [Mongoose ODM](https://mongoosejs.com/docs/index.html) (object data modeling). The Mongoose documentation is top notch, whereas the MongoDB docs could use some work. Please reference their documentation for more information. **You will need MongoDB set up on your computer to follow along.** This is how we set up our database._
 
@@ -108,47 +110,49 @@ const characterSchema = new mongoose.Schema({
 module.exports = mongoose.model('Character', characterSchema);
 ```
 
-You'll notice that 'aliases' has a type `[String]`; this is to specify that all aliases are arrays of strings. 
+You'll notice that 'aliases' has a type `[String]`; this is to specify that all aliases are arrays of strings.
 
 The default value is for characters that do not have an 'aliases' field. This is an optional field. (There is also an optional 'required' field, which is defaulted to false.)
 
 #### b. Set up your connection
 
-1. You are going to need to connect your application to your database. We also want to listen for on, off, and error events for our connection. Check out our connect.js file. You will see we import and call our event listeners in our server.js file as 
+1. You are going to need to connect your application to your database. We also want to listen for on, off, and error events for our connection. Check out our connect.js file. You will see we import and call our event listeners in our server.js file as
 
-    `require('lib/utils/connect.js')();`
+   `require('lib/utils/connect.js')();`
 
-2. Your local db name should remain private to you. Set up an .env file and store your `MONGODB_URI=` link there. See our `.env.example` file in the root of our project. _Don't forget to add .env to your .gitignore file!_
+2. Your local database name should remain private to you. Set up an .env file and store your `MONGODB_URI=` link there. See our `.env.example` file in the root of our project. _Don't forget to add .env to your .gitignore file!_
 
-    To access your environment variables, you need to run
+   To access your environment variables, you need to run
 
-    ` > npm i dotenv `
+   `> npm i dotenv`
 
-    and add this to the top of your server.js file
+   and add this to the top of your server.js file
 
-    `require('dotenv').config();`
+   `require('dotenv').config();`
 
 3. Try running your server. Remember, first you will need to run `gomongo`. Then run your server.js file. You should be able to see the following log:
 
-    ```
-    listening on PORT ${PROCESS.ENV_PORT}
-    Connection open on mongodb:${PROCESS.ENV_MONGODB_URI}
-    ```
+   ```
+   listening on PORT ${PROCESS.ENV_PORT}
+   Connection open on mongodb:${PROCESS.ENV_MONGODB_URI}
+   ```
 
 #### c. Seed your database
+
 In order to seed your database, you will need:
+
 ```
 // access to your MONGODB_URI
-require('dotenv').config(); 
+require('dotenv').config();
 
-// connection to your db
-require('./lib/utils/connect')(); 
+// connection to your database
+require('./lib/utils/connect')();
 
 // your scraper function
-const scrapeData = require('./scrapers/infoScraper'); 
+const scrapeData = require('./scrapers/infoScraper');
 
 // your mongoose schema
-const Character = require('./lib/Models/Character'); 
+const Character = require('./lib/Models/Character');
 ```
 
 We set all of this up in it's own file in the root of our application.
@@ -157,25 +161,26 @@ We set all of this up in it's own file in the root of our application.
 // ./seed.js
 
 // don't forget to close the connection when finished!
-const mongoose = require('mongoose'); 
+const mongoose = require('mongoose');
 
 scrapeData()
   .then(chars => Character.create(chars))
-  .finally(() => mongoose.connection.close()); 
+  .finally(() => mongoose.connection.close());
 ```
 
-To check out your data, we used [Robo3T](https://robomongo.org/), a free, open source MongoDB GUI. Check out their website for documentation on how to download and set this up on your machine. 
+To check out your data, we used [Robo3T](https://robomongo.org/), a free, open source MongoDB GUI. Check out their website for documentation on how to download and set this up on your machine.
 
 #### Step 4: Routes
-This section requires some familiarity with [Express Router](http://expressjs.com/en/5x/api.html#router). 
 
-This section will just be a summary of the functionality of each of our routes. 
+This section requires some familiarity with [Express Router](http://expressjs.com/en/5x/api.html#router).
 
-**Hot Tip** 
-We recommend thinking of your users and data. What data would your users want? If you have _a lot_ of data, consider pagination as an option. Try and bounce off ideas with other devs to come up with your routes. 
+This section will just be a summary of the functionality of each of our routes.
+
+**Hot Tip**
+We recommend thinking of your users and data. What data would your users want? If you have _a lot_ of data, consider pagination as an option. Try and bounce off ideas with other devs to come up with your routes.
 
 ##### a. Get character by id
-    
+
     .get('/:id', (req, res, next) => {
       Character
         .findById(req.params.id)
@@ -183,12 +188,11 @@ We recommend thinking of your users and data. What data would your users want? I
         .then(character => res.send(character))
         .catch(next);
     })
-    
 
 ##### b. Get random character(s)
-  Our get route looks very similar here... 
 
-    
+Our get route looks very similar here...
+
     .get('/random', (req, res, next) => {
       const { count = 1 } = req.query;
       Character
@@ -197,14 +201,15 @@ We recommend thinking of your users and data. What data would your users want? I
         .catch(next);
     })
 
-  You'll notice a custom static called 'getRandom' being used. You can create your own static method in your model schema. Check out the [docs](https://mongoosejs.com/docs/2.7.x/docs/methods-statics.html) to learn more.
+You'll notice a custom static called 'getRandom' being used. You can create your own static method in your model schema. Check out the [docs](https://mongoosejs.com/docs/2.7.x/docs/methods-statics.html) to learn more.
 
     characterSchema.statics.getRandom = function(count) {
       return this.aggregate([{ $sample: { size: count }}, {$project: { __v: false}}]);
     };
 
 ##### c. Get characters + pagination + queries
-  For our get all characters route, we repurposed it to handle multiple functionalities including pagination and all queries. Check out the source code:
+
+For our get all characters route, we repurposed it to handle multiple functionalities including pagination and all queries. Check out the source code:
 
     .get('/', (req, res, next) => {
     const { page = 1, perPage = 20, ...search } = req.query;
@@ -228,12 +233,13 @@ We recommend thinking of your users and data. What data would your users want? I
 ### Step 5: Deploy!
 
 We decided to deploy to Heroku! Here are some resources:
-* [Deploying NodeJS App](https://devcenter.heroku.com/articles/deploying-nodejs)
-* [Deploying with Git](https://devcenter.heroku.com/articles/git)
-* [mLab noSQL DB set-up](https://devcenter.heroku.com/articles/mongolab)
+
+- [Deploying NodeJS App](https://devcenter.heroku.com/articles/deploying-nodejs)
+- [Deploying with Git](https://devcenter.heroku.com/articles/git)
+- [mLab noSQL DB set-up](https://devcenter.heroku.com/articles/mongolab)
 
 ### Step 6: Document!
 
-Take the time to document your application either in a README or create a front end! Provide information on your routes and what type of data users will be accessing. 
+Take the time to document your application either in a README or create a front end! Provide information on your routes and what type of data users will be accessing.
 
 **Share your APIs with us on Twitter! [@katerj](https://twitter.com/katerj) [@paigeegorry](https://twitter.com/paigeegorry)**

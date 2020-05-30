@@ -80,8 +80,8 @@ const Two = () => (
     <p>
       Finally, once you have some workable data, you'll likely need to write and
       run some "clean up" functions in order to start to piece it all together
-      to match your db schema. In our source code, you'll find these clean up
-      functions in{" "}
+      to match your database schema. In our source code, you'll find these clean
+      up functions in{" "}
       <a href="https://github.com/api-tutorial/stranger-things-api/blob/master/scrapers/utils.js">
         scrapers/utils.js
       </a>

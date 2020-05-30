@@ -145,8 +145,8 @@ module.exports = mongoose.model(
       </li>
       <li>
         <p>
-          Your local db name should remain private to you. Set up an .env file
-          and store your <code>MONGODB_URI=</code> link there. See our
+          Your local database name should remain private to you. Set up an .env
+          file and store your <code>MONGODB_URI=</code> link there. See our
           .env.example file in the root of our project.{" "}
           <i>Don't forget to add .env to your .gitignore file!</i>
           <br />
