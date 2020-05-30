@@ -192,7 +192,6 @@ code {
 }
 
 .code-block {
-  padding-left: 0.5rem;
   width: fit-content;
   margin: 0 auto;
 }
@@ -248,12 +247,11 @@ input:focus {
 }
 
 #user-input {
-  width: 75%;
+  width: 100%;
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  margin-left: 1em;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0.5em;
 }
 
@@ -411,7 +409,7 @@ div.active-item {
   }
 }
 
-@media (max-width: 1115px) {
+@media (max-width: 1024px) {
   #user-input {
     flex-direction: column;
     margin: 0;
@@ -419,5 +417,10 @@ div.active-item {
   }
   #endpoint-input {
     margin: 1em 0;
+  }
+  .code-block {
+    padding-left: 0.5rem;
+    overflow-x: scroll;
+    width: unset;
   }
 }
