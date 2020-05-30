@@ -356,6 +356,7 @@ div.MuiExpansionPanelSummary-content {
 
 div.MuiExpansionPanelDetails-root {
   padding: 0;
+  flex-direction: column;
 }
 
 .MuiExpansionPanelDetails-root.example-json > pre {

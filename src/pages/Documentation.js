@@ -99,9 +99,9 @@ const Documentation = () => {
                 <div className="queries-box">
                   <h3>Available Queries</h3>
                   <p>
-                    aliases, otherRelations, affiliation, occupation, residence,
-                    appearsInEpisodes, status, gender, eyeColor, born,
-                    hairColor, portrayedBy
+                    name, aliases, otherRelations, affiliation, occupation,
+                    residence, appearsInEpisodes, status, gender, eyeColor,
+                    born, hairColor, portrayedBy
                   </p>
                 </div>
                 <pre>{JSON.stringify(data.name, null, 1)}</pre>
