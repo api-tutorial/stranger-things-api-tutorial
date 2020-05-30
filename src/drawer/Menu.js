@@ -20,7 +20,8 @@ const Menu = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [isDropDownVisible, setIsDropdownVisible] = useState(false);
   const closeMenu = () => setIsVisible(false);
-  const isMobile = useWindowSize().width < 600;
+  const { width } = useWindowSize();
+  const isMobile = width < 600;
 
   return (
     <nav className="nav-drawer">
