@@ -9,9 +9,11 @@ import Four from "../tutorial-steps/Four";
 import Five from "../tutorial-steps/Five";
 import Six from "../tutorial-steps/Six";
 import "../App.css";
+import { Introduction } from "../tutorial-steps/Introduction";
 
 const Tutorial = () => (
   <>
+    <Introduction />
     <Prerequisites />
     <Divider id="set-up" flickerSpeed="slow" />
     <SetUp />
