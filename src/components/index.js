@@ -1,13 +1,8 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 export const Tabs = () => (
   <ul className="tabs">
-    <li className="tab">
-      <NavLink to="/docs" activeClassName="active">
-        Documentation
-      </NavLink>
-    </li>
+    <li className="tab">Documentation</li>
     {/* <li className="tab">
       <NavLink to="/tutorial" activeClassName="active">
         Tutorial

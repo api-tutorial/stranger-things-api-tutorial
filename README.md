@@ -1,6 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ad522b2e-c04d-47db-9143-711e911d0025/deploy-status)](https://app.netlify.com/sites/strangerthingsapi/deploys)
 
 [API Documentation](https://strangerthingsapi.netlify.app/docs)
+[API Github repo](https://github.com/api-tutorial/stranger-things-api)
 
 ## Tutorial
 

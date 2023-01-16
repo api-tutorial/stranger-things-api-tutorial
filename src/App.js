@@ -26,6 +26,11 @@ const App = () => {
         )}
         <main>
           <Route exact path="/" render={() => <Redirect to="/docs" />} />
+          <Route
+            exact
+            path="/tutorial"
+            render={() => <Redirect to="/docs" />}
+          />
           <Route exact path="/docs" component={Documentation} />
         </main>
       </Router>
