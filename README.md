@@ -1,8 +1,11 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ad522b2e-c04d-47db-9143-711e911d0025/deploy-status)](https://app.netlify.com/sites/strangerthingsapi/deploys)
 
+[API Documentation](https://strangerthingsapi.netlify.app/docs)
+[API Github repo](https://github.com/api-tutorial/stranger-things-api)
+
 ## Tutorial
 
-This project uses Node.js, Express, Superagent, MongoDB, Mongoose, and node-html-parser deployed to Heroku. This tutorial requires some familiarity with Node.js, Express, and MongoDB, but we have linked resources for you as well. Other technologies are available!
+This project uses Node.js, Express, MongoDB, Mongoose, and node-html-parser deployed to fly.io. This tutorial requires some familiarity with Node.js, Express, and MongoDB, but we have linked resources for you as well. Other technologies are available!
 
 ### Getting set up
 
@@ -232,11 +235,7 @@ For our get all characters route, we repurposed it to handle multiple functional
 
 ### Step 5: Deploy!
 
-We decided to deploy to Heroku! Here are some resources:
-
-- [Deploying NodeJS App](https://devcenter.heroku.com/articles/deploying-nodejs)
-- [Deploying with Git](https://devcenter.heroku.com/articles/git)
-- [mLab noSQL DB set-up](https://devcenter.heroku.com/articles/mongolab)
+We are using [fly.io](https://fly.io/docs/speedrun/)
 
 ### Step 6: Document!
 
