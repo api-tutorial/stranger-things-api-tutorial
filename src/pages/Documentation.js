@@ -14,7 +14,7 @@ const expandIcon = <ExpandMoreIcon style={{ color: "white" }} />;
 const Documentation = () => {
   const [expanded, setExpanded] = useState(false);
 
-  const handleChange = (panel) => (event, isExpanded) => {
+  const handleChange = (panel) => (_event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
   };
 
@@ -22,7 +22,7 @@ const Documentation = () => {
     <>
       <section className="endpoints">
         <h3>Endpoints</h3>
-        <p>stranger-things-api.herokuapp.com/</p>
+        <p>stranger-things-api.fly.dev/</p>
         <ul className="endpoints-list">
           <li>
             <ExpansionPanel
@@ -36,7 +36,7 @@ const Documentation = () => {
                 className={expanded === "panel1" ? "active-item" : ""}
               >
                 <span className="bold">GET all characters</span>
-                <span>/api/v1/characters</span>
+                <span>api/v1/characters</span>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails className="example-json">
                 <pre>{JSON.stringify(data.all, null, 1)}</pre>
@@ -55,7 +55,7 @@ const Documentation = () => {
                 className={expanded === "panel2" ? "active-item" : ""}
               >
                 <span className="bold">GET by ID</span>
-                <span>/api/v1/characters/:id</span>
+                <span>api/v1/characters/:id</span>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails className="example-json">
                 <pre>{JSON.stringify(data.id, null, 1)}</pre>
@@ -74,7 +74,7 @@ const Documentation = () => {
                 className={expanded === "panel3" ? "active-item" : ""}
               >
                 <span className="bold">GET random character(s)</span>{" "}
-                /api/v1/characters/random?count=1
+                api/v1/characters/random?count=1
               </ExpansionPanelSummary>
               <ExpansionPanelDetails className="example-json">
                 <pre>{JSON.stringify(data.random, null, 1)}</pre>
@@ -93,7 +93,7 @@ const Documentation = () => {
                 className={expanded === "panel4" ? "active-item" : ""}
               >
                 <span className="bold">GET by query</span>{" "}
-                /api/v1/characters?name=Mike+Wheeler
+                api/v1/characters?name=Mike+Wheeler
               </ExpansionPanelSummary>
               <ExpansionPanelDetails className="example-json">
                 <div className="queries-box">
@@ -120,7 +120,7 @@ const Documentation = () => {
                 className={expanded === "panel5" ? "active-item" : ""}
               >
                 <span className="bold">GET all with pagination</span>{" "}
-                /api/v1/characters?perPage=5?page=1
+                api/v1/characters?perPage=5?page=1
               </ExpansionPanelSummary>
               <ExpansionPanelDetails className="example-json">
                 <pre>{JSON.stringify(data.pagination, null, 1)}</pre>

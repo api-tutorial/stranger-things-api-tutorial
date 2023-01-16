@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const Sandbox = () => {
   const [userInput, setUserInput] = useState("");
   const [data, setData] = useState([]);
-  const API_URL = "https://stranger-things-api.herokuapp.com/api/v1/characters";
+  const API_URL = "https://stranger-things-api.fly.dev/api/v1/characters";
 
   const fetchData = (e) => {
     e.preventDefault();
@@ -20,14 +20,14 @@ const Sandbox = () => {
           <legend>Try out an endpoint:</legend>
           <div id="user-input">
             <label htmlFor="endpoint-input">
-              Finish the URL /api/v1/characters/
+              Finish the URL api/v1/characters
             </label>
             <input
               id="endpoint-input"
               placeholder="example: /random"
               value={userInput}
               onChange={({ target }) => setUserInput(target.value)}
-              aria-label="Try out an endpoint by finishing the url /api/v1/characters/"
+              aria-label="Try out an endpoint by finishing the url /api/v1/characters"
             />
             <button id="submit-btn" onClick={(e) => fetchData(e)}>
               Fetch

@@ -8,11 +8,11 @@ export const Tabs = () => (
         Documentation
       </NavLink>
     </li>
-    <li className="tab">
+    {/* <li className="tab">
       <NavLink to="/tutorial" activeClassName="active">
         Tutorial
       </NavLink>
-    </li>
+    </li> */}
   </ul>
 );
 

@@ -51,7 +51,7 @@ const Menu = () => {
               Documentation
             </a>
           </li>
-          <li className="nav-item dropdown-btn">
+          {/* <li className="nav-item dropdown-btn">
             <button
               aria-label="tutorial sections dropdown"
               className="dropdown"
@@ -61,7 +61,7 @@ const Menu = () => {
               {!isDropDownVisible && <ExpandMore />}
               {isDropDownVisible && <ExpandLess />}
             </button>
-          </li>
+          </li> */}
           <li>
             <ul
               className={

@@ -20,7 +20,7 @@ const Prerequisites = () => (
     </div>
     <p>
       This project uses Node.js, Express, Superagent, MongoDB, Mongoose,
-      node-html-parser and is deployed to Heroku. This tutorial requires some
+      node-html-parser and is deployed to fly.io. This tutorial requires some
       familiarity with these libraries/NPM packages. For more information, find
       resource links in the menu. Other technologies are available so if you are
       more familiar with an alternative please feel free to use that instead!
